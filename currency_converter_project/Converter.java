@@ -1,15 +1,9 @@
 package currency_converter_project;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import java.util.ArrayList;
 
-import java8.Person;
 
 /**
  * This class has methods that convert from one currency to another.
@@ -36,17 +30,5 @@ public class Converter{
          // System.out.println(currency_value_in_uganda_shillings[index_value_to]);
          return toUgx/currency_value_in_uganda_shillings[index_value_to];
       }
-   }
-
-   List<Person> loadPeople(File file) throws IOException{
-      BufferedReader br = new BufferedReader(new FileReader(file));
-      List<Person> list = new ArrayList<>();
-      String line;
-      while((line = br.readLine())!=null){
-         String[] l = line.strip().split(" ");
-         list.add(new Person(l[0],l[1],Integer.parseInt(l[2]), l[3],l[4]));
-      }
-      br.close();
-      return list;
    }
 }
