@@ -1,4 +1,4 @@
-# practice
+# PRACTICE
 This repository is for practicing applications development 
 Under this project, I developed a currency converter application using Java and the Java GUI packages.
 - Currency Converter Java App.
