@@ -4,4 +4,4 @@ Below are the concepts that I have practiced for competitive programming.
     - Input / Output.
     - Working with numbers.
     - Shortening code.
-    - Mathematics 
+    - Mathematics
