@@ -6,7 +6,11 @@
 class LetterInitials{
     // Letter A
     void initial_a(){
-        System.out.println()
+        System.out.println("          **            ");
+        System.out.println("         *  *           ");
+        System.out.println("        ******          ");
+        System.out.println("       *      *         ");
+        System.out.println("      *        *        ");
     }
 
     // Letter B
