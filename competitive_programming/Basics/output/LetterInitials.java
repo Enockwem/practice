@@ -1,6 +1,7 @@
 /**
     Since, there are 26 letters, therefore, there are gonna be 26 methods in this class.
     These methods are gonna be able to create letter initials using the esterics
+    After creating this file very well. I then have to create LetterInitialDemo.java file to test my LetterInitials.java file
  */
 class LetterInitials{
     // Letter A
