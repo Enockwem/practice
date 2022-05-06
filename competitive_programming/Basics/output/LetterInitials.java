@@ -14,13 +14,44 @@ class LetterInitials{
     }
 
     // Letter B
-    void initial_b(){}
+    void initial_b(){
+        System.out.println("     * * * *             ");
+        System.out.println ("    *       *            ");
+        System.out.println ("    *        *           ");
+        System.out.println ("    *         * ");
+        System.out.println( "    *        *  ");
+        System.out.println("     *       *   ");
+        System.out.println("     * * * *     ")
+        System.out.println ("    *       *            ");
+        System.out.println ("    *        *           ");
+        System.out.println ("    *         * ");
+        System.out.println( "    *        *  ");
+        System.out.println("     *       *   ");
+        System.out.println("     * * * *     ")
+
+    }
 
     // Letter C
-    void initial_c(){}
+    void initial_c(
+        System.out.println("       * * *      ")
+        System.out.println ("    *        *        ");
+        System.out.println ("    *                 ");
+        System.out.println ("    *             ");
+        System.out.println( "    *             ");
+        System.out.println("     *        *    ");
+        System.out.println("       * * *       ")
+    ){}
 
     // Letter D
-    void initial_d(){}
+    void initial_d(
+        System.out.println("     * * * *     ")
+        System.out.println ("    *       *            ");
+        System.out.println ("    *        *           ");
+        System.out.println ("    *         * ");
+        System.out.println( "    *        *  ");
+        System.out.println("     *       *   ");
+        System.out.println("     * * * *     ")
+    ){}
 
     // Letter E
     void initial_e(){}
