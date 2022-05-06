@@ -76,13 +76,13 @@ class LetterInitials{
 
     // Letter G
     void initial_g(){
-         System.out.println("       * * *      ")
+         System.out.println("       * * *      ");
         System.out.println ("    *        *        ");
         System.out.println ("    *                 ");
         System.out.println ("    *             ");
         System.out.println( "    *     * **       ");
         System.out.println("     *        *    ");
-        System.out.println("       * * *  *     ")
+        System.out.println("       * * *  *     ");
     }
 
     // Letter H
@@ -194,7 +194,7 @@ class LetterInitials{
         System.out.println( "    *        *    ");
         System.out.println("     *     *  *    ");
         System.out.println("       * * * *     ");
-        System.out.println("               *   ");
+        System.out.println("              *   ");
     }
 
     // Letter R
