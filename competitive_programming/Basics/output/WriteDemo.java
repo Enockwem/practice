@@ -4,7 +4,7 @@ class WriteDemo{
     public static void main(String[] args){
         int a;
         a = 'A';
-        System.out.write(b);
+        System.out.write(a);
         System.out.write('\n');
     }
 }
