@@ -41,7 +41,7 @@ class ReadingString{
            }
            lyrics.add(text);
            i++;
-        }while(i < 10);
+        }while(i <= 10);
         
         // Message to display after
         if(i == 9){
