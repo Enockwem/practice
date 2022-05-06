@@ -10,8 +10,5 @@ class ReadingBuffer{
             c = (char) br.read();
             System.out.println(c);
         }while(c != 'q');
-        System.out.println("Enter the last string: ");
-        k = br.readLine();
-        System.out.println(k);
     }
 }
