@@ -43,7 +43,7 @@ class LetterInitials{
     ){}
 
     // Letter D
-    void initial_d(
+    void initial_d(){
         System.out.println("     * * * *     ")
         System.out.println ("    *       *            ");
         System.out.println ("    *        *           ");
@@ -51,25 +51,75 @@ class LetterInitials{
         System.out.println( "    *        *  ");
         System.out.println("     *       *   ");
         System.out.println("     * * * *     ")
-    ){}
+    }
 
     // Letter E
-    void initial_e(){}
+    void initial_e(){
+        System.out.println("     * * * * *    ");
+        System.out.println ("    *             ");
+        System.out.println ("    *                   ");
+        System.out.println ("    * * * * *         ");
+        System.out.println( "    *              ");
+        System.out.println("     *               ");
+        System.out.println("     * * * * *       ");
+    }
 
     // Letter F
-    void initial_f(){}
+    void initial_f(){ 
+        System.out.println("     * * * * *    ");
+        System.out.println ("    *             ");
+        System.out.println ("    *                   ");
+        System.out.println ("    * * * * *         ");
+        System.out.println( "    *              ");
+        System.out.println("     *               ");
+        System.out.println("     *      ");
+    }
 
     // Letter G
-    void initial_g(){}
+    void initial_g(){
+         System.out.println("       * * *      ")
+        System.out.println ("    *        *        ");
+        System.out.println ("    *                 ");
+        System.out.println ("    *             ");
+        System.out.println( "    *     * **       ");
+        System.out.println("     *        *    ");
+        System.out.println("       * * *  *     ")
+    }
 
     // Letter H
-    void initial_h(){}
+    void initial_h(){
+        System.out.println("     *       *    ");
+        System.out.println ("    *       *           ");
+        System.out.println ("    *       *                ");
+        System.out.println ("    * * * * *         ");
+        System.out.println( "    *       *           ");
+        System.out.println("     *       *             ");
+        System.out.println("     *       *            ");
+    }
     
     // Letter I
-    void initial_i(){}
+    void initial_i(){
+        System.out.println("      *  * *        ");
+        System.out.println ("        *                 ");
+        System.out.println ("        *                      ");
+        System.out.println ("        *           ");
+        System.out.println( "        *                 ");
+        System.out.println("         *                   ");
+        System.out.println("      *  *  *                ");
+  
+    }
 
     // Letter J
-    void initial_j(){}
+    void initial_j(){
+        System.out.println("     * * * *       ");
+        System.out.println ("          *              ");
+        System.out.println ("          *                    ");
+        System.out.println ("          *            ");
+        System.out.println( "   *      *                             ");
+        System.out.println("     * * *                 ");
+        System.out.println("                     ");
+  
+    }
 
     // Letter K
     void initial_k(){}
