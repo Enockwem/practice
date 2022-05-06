@@ -25,5 +25,33 @@ class ReadingString{
                 System.out.println(names.get(i) + " requested for a song called "+ songs.get(i));
             }
         }
+
+        // Now ask of the listeners to write the lyrics of the song that they requested for.
+        // For the start, we will always choose the listen that called in first.
+        String text;
+        ArrayList lyrics = new ArrayList<String>();
+        int i = 0;
+        System.out.println("So, now we are going into the lyrics session.");
+        System.out.println("Please, "+names.get(0)+" right in the spaces below the first 10 lines of song that you requested to listen to: ");
+        System.out.println("Or type 'stop' if you want to stop and quite the program.");
+        do{
+           text = br.readLine();
+           if(text.equals("stop")){
+               break;
+           }
+           lyrics.add(text);
+           i++;
+        }while(i < 10);
+        
+        // Message to display after
+        if(i == 9){
+            // Thank the user for being patient and completing the whole process.
+            System.out.println("Thanks for being patient and completing the whole process.");
+            System.out.println("You have given the first 10 lyrical lines of the song that you requested for.");
+            System.out.println("This is how the song goes.");
+            for(Object lyric : lyrics){
+                System.out.println(lyric);
+            }
+        }
     }
 }
