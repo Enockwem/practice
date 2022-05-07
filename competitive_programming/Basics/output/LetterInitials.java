@@ -4,6 +4,10 @@
     After creating this file very well. I then have to create LetterInitialDemo.java file to test my LetterInitials.java file
  */
 class LetterInitials{
+    // Create a constructor of this class
+    LetterInitials(){
+        
+    }
     // Letter A
     void initial_a(){
         System.out.println("          **            ");

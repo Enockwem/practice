@@ -14,12 +14,13 @@ class LetterInitialDemo{
         String[] initials = new String[names.length];
         int i = 0;
         for(String a: names){
-            initials[i] = "initial"+a.charAt(i);
+            initials[i] = "initial_"+a.charAt(i);
             i++;
         }
 
         for(String p: initials){
             System.out.println(p);
+            // How to list all the methods in a given class instance created in the main method.
         }
     }
 }
