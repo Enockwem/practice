@@ -6,6 +6,6 @@ class PrintWriterDemo{
         int i = -7;
         pw.println(i);
         double d = 4.5e-7;
-        pw.println(d);
+        System.out.println("I have worked well as a medical person");
     }
 }
