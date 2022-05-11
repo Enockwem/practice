@@ -6,7 +6,7 @@
 class LetterInitials{
     // Create a constructor of this class
     LetterInitials(){
-        
+        initial_a()
     }
     // Letter A
     void initial_a(){
