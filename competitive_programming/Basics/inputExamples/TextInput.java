@@ -1,6 +1,7 @@
 /**
-This program is implementing a simple program that calculates the area of a circle
-using the TextIO java library to get user input s
+  * This program is implementing a simple program that calculates the area of a circle using the 
+  * TextIO java library to get user input.
+  * @author Wasswa Enock Male
  */
  import java.io.*;
  import static lang.java.Math;
