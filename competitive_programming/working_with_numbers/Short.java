@@ -4,7 +4,9 @@ class Short{
         int e = 0;
         int demon = 9;
         int num = 81;
-        boolean ration = demon == 9 ? 0:num/demon;
+        int ration = demon == 9 ? 0:num/demon;
+        System.out.println(ration);
+
         if(demon != 0 && num / demon > 10){
             System.out.println("This is  a short-circuit operator");
         }else{
