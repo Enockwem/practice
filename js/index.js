@@ -7,8 +7,10 @@
  * This is a tic tac toe game.
  */
 
-let tilediv = document.getElementsByClassName('tile') // This returns the collection of all elements with a 'tile' class and stores them in tilediv
+// This returns the collection of all elements with a 'tile' class and stores them in tilediv
+let tilediv = document.getElementsByClassName('tile')
 
+let resArr = []
 /**
  * The function below adds a click listener to all the div elements that have class tile.
  */
