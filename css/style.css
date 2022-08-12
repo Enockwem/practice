@@ -22,3 +22,13 @@ body{
     font-size: 50px;
     text-align: center;
 }
+
+.main{
+    max-width: 500px;
+    max-height: 500px;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
