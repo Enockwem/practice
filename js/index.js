@@ -6,3 +6,22 @@
  * @author WASSWA ENOCK MALE
  * This is a tic tac toe game.
  */
+
+let tilediv = document.getElementsByClassName('tile') // This returns the collection of all elements with a 'tile' class and stores them in tilediv
+
+/**
+ * The function below adds a click listener to all the div elements that have class tile.
+ */
+let clickTile = ()=>{
+    for(let tile of tilediv){
+        tile.addEventListener('click',(event)=>{
+            if(event.target.textContent === ""){
+                event.target.textContent = 'x'
+            }else{
+                console.log(event.target.textContent)
+            }
+        });
+    }
+}
+
+clickTile()
