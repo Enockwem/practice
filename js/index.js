@@ -131,6 +131,6 @@ function checkHorizontal(arr){
 
 function checkDiagnol(arr){
     // There are only two diagnols in the box
-    // The two diagnols are at values, 
+    // The two diagnols are at values, [0,4,8] and [2,4,6] which are the only even numbers.
 
 }
