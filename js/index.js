@@ -22,13 +22,21 @@ let checkbox = document.getElementById("yes")
 
 let resArr = [1,2,3,4,5,6,7,8,9]
 
-let count = 0
+let count = 1
 function go(){
     // now, hold value of the checkbox
     let checkbool = checkboxFun()
     if(checkbool){
         console.log("The user wants to go first!")
-        clickTile()
+        // while(count <= 9){
+        if(count % 2 == 0){
+            computerTurn()
+            count++
+        }else{
+            clickTile()
+            count++
+        }
+        // }
     }else{
         console.log("The user doesn't want to go first")
     }
@@ -79,6 +87,7 @@ function clickTile(){
 /**
  * @param {array} resArr 
  * @param {index of the last enetered element} indexHumanPlayed
+ * In this method, the computer has to use the random Math method to guess what to play next
  */
 function computerTurn(resArr, indexHumanPlayed){
 
@@ -97,3 +106,34 @@ function checkMatching(arr){
  * Do the horizontal check to see if it is the same
  * horizontal check, vertical check and diagnol check.
  */
+function checkVertical(arr){
+    // There are three vertical values in the game.
+    let first = 0, second = 3, third = 6
+    // Now pick out three values from the array, for the first vertical value.
+    for(let k = 0; k < 3; k++){
+        console.log(typeof arr[first])
+        break
+        // if(typeof arr[first] === Number){
+        //         console.log("They are numbers")
+        //         first++
+        //         second++
+        //         third++
+        //     }else{
+        //         first++
+        //         second++
+        //         third++
+        //         console.log("They are not sure")
+        //     }
+    }
+}
+
+checkVertical(resArr)
+function checkHorizontal(arr){
+    // There are three horizontal values in the game.
+    let first, second, third
+}
+
+function checkDiagnol(arr){
+    // There are only two diagnols in the box
+
+}
