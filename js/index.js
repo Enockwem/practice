@@ -26,23 +26,29 @@ let count = 0
 let go = ()=>{
     // now, hold value of the checkbox
     let checkbool = checkboxFun()
-    
-
+    if(checkbool){
+        console.log("The user wants to go first!")
+    }else{
+        console.log("The user doesn't want to go first")
+    }
 }
+// go()
 /**
  * @returns a boolean
  */
 function checkboxFun() {
     // If the user checks or not, a value will be returned
     let holdcheck = checkbox.checked
-    checkbox.addEventListener('click', ({target:{checked}}) => {
+    checkbox.addEventListener('change', ({target:{checked}}) => {
         // Check the onclick button
         holdcheck = checked
+        console.log(checked)
     })
+    
     return holdcheck;
 }
 
-// let checkB = checkboxFun()
+let checkB = checkboxFun()
 
 /**
  * The function below adds a click listener to all the div elements that have class tile.
