@@ -10,11 +10,25 @@
  *  [6,7,8]]
  */
 
+/**
+ * This this the function that will be called when it's time to play the game.
+ */
+
 // This returns the collection of all elements with a 'tile' class and stores them in tilediv
 let tilediv = document.getElementsByClassName('tile')
 
-
 let checkbox = document.getElementById("yes")
+
+let count = 0
+let go = ()=>{
+    // The user will use 'X'
+    // The computer will use 'O'
+    if(count == 0){
+        // This means that the game is just beginning.
+
+    }
+}
+
 
 /**
  * @returns a boolean
@@ -48,18 +62,6 @@ let clickTile = ()=>{
     }
 }
 
-/**
- * This this the function that will be called when it's time to play the game.
- */
-let count = 0
-let go = ()=>{
-    // The user will use 'X'
-    // The computer will use 'O'
-    if(count == 0){
-        // This means that the game is just beginning.
-
-    }
-}
 // console.log(resArr)
 /**
  * This function calculates things
