@@ -5,10 +5,14 @@
  * I am gonna use array operations in javascript to be able to capture the logic of the game.
  * @author WASSWA ENOCK MALE
  * This is a tic tac toe game.
+ * [[0,1,2],
+ *  [3,4,5],
+ *  [6,7,8]]
  */
 
 // This returns the collection of all elements with a 'tile' class and stores them in tilediv
 let tilediv = document.getElementsByClassName('tile')
+// console.log(tilediv)
 
 let resArr = []
 /**
@@ -16,14 +20,41 @@ let resArr = []
  */
 let clickTile = ()=>{
     for(let tile of tilediv){
-        tile.addEventListener('click',(event)=>{
+        // const tile = tilediv[item]
+        tile.addEventListener('click', (event)=>{
             if(event.target.textContent === ""){
-                event.target.textContent = 'x'
-            }else{
-                console.log(event.target.textContent)
+                event.target.textContent = "X"
+                resArr[tile.id - 1] = "X"
             }
-        });
+        })
+    }
+}
+/**
+ * This function calculates things
+ */
+// clickTile()
+// checkMatching(resArr)
+// computerTurn(resArr,3)
+// console.log(resArr)
+
+/**
+ * @param {array} resArr 
+ * @param {index of the last enetered element} indexHumanPlayed
+ */
+let computerTurn = (resArr, indexHumanPlayed)=>{
+    if(resArr.length == 9){
+        // should be game over 
+        console.log(resArr)
+    }else{
+        console.log("It works fine")
     }
 }
 
-clickTile()
+/**
+ * 
+ * @param {*} arr 
+ * @returns a string
+ */
+let checkMatching = (arr)=>{
+    console.log("In the matching function", arr)
+}
