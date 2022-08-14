@@ -19,14 +19,14 @@ let tilediv = document.getElementsByClassName('tile')
 
 let checkbox = document.getElementById("yes")
 
+
+let resArr = [10,11,12,13,14,15,16,17,18]
+
 let count = 0
 let go = ()=>{
-    // The user will use 'X'
-    // The computer will use 'O'
-    if(count == 0){
-        // This means that the game is just beginning.
+    // now, hold value of the checkbox
+    let checkbool = checkboxFun()
 
-    }
 }
 
 
@@ -45,7 +45,6 @@ function checkboxFun() {
 
 // let checkB = checkboxFun()
 
-let resArr = [10,11,12,13,14,15,16,17,18]
 /**
  * The function below adds a click listener to all the div elements that have class tile.
  */
