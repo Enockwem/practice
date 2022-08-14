@@ -110,30 +110,27 @@ function checkVertical(arr){
     // There are three vertical values in the game.
     let first = 0, second = 3, third = 6
     // Now pick out three values from the array, for the first vertical value.
+    // To get the next three vertical values, you will have to add 1 to the three variables of
+    // first, second and third.
     for(let k = 0; k < 3; k++){
         console.log(typeof arr[first])
         break
-        // if(typeof arr[first] === Number){
-        //         console.log("They are numbers")
-        //         first++
-        //         second++
-        //         third++
-        //     }else{
-        //         first++
-        //         second++
-        //         third++
-        //         console.log("They are not sure")
-        //     }
     }
 }
 
 checkVertical(resArr)
 function checkHorizontal(arr){
     // There are three horizontal values in the game.
-    let first, second, third
+    // To get the next horizontal values, you will have to add 3 to the three variables of first,
+    // second and third.
+    let first=0, second = 1, third = 2
+    for(let k = 0; k < 3; k++){
+        console.log(typeof arr[first])
+    }
 }
 
 function checkDiagnol(arr){
     // There are only two diagnols in the box
+    // The two diagnols are at values, 
 
 }
