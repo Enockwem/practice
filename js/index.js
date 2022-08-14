@@ -12,7 +12,24 @@
 
 // This returns the collection of all elements with a 'tile' class and stores them in tilediv
 let tilediv = document.getElementsByClassName('tile')
-// console.log(tilediv)
+
+
+let checkbox = document.getElementById("yes")
+
+/**
+ * @returns a boolean
+ */
+function checkboxFun() {
+    // If the user checks or not, a value will be returned
+    let holdcheck = checkbox.checked
+    checkbox.addEventListener('click', ({target:{checked}}) => {
+        // Check the onclick button
+        holdcheck = checked
+    })
+    return holdcheck;
+}
+
+// let checkB = checkboxFun()
 
 let resArr = [10,11,12,13,14,15,16,17,18]
 /**
@@ -40,7 +57,7 @@ let go = ()=>{
     // The computer will use 'O'
     if(count == 0){
         // This means that the game is just beginning.
-        
+
     }
 }
 // console.log(resArr)
