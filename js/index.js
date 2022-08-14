@@ -23,16 +23,17 @@ let checkbox = document.getElementById("yes")
 let resArr = [1,2,3,4,5,6,7,8,9]
 
 let count = 0
-let go = ()=>{
+function go(){
     // now, hold value of the checkbox
     let checkbool = checkboxFun()
     if(checkbool){
         console.log("The user wants to go first!")
+        clickTile()
     }else{
         console.log("The user doesn't want to go first")
     }
 }
-// go()
+go()
 /**
  * @returns a boolean
  */
@@ -42,7 +43,7 @@ function checkboxFun() {
     checkbox.addEventListener('change', ({target:{checked}}) => {
         // Check the onclick button
         holdcheck = checked
-        console.log(checked)
+        // console.log(checked)
     })
     
     return holdcheck;
@@ -53,7 +54,7 @@ let checkB = checkboxFun()
 /**
  * The function below adds a click listener to all the div elements that have class tile.
  */
-let clickTile = ()=>{
+function clickTile(){
     for(let tile of tilediv){
         // const tile = tilediv[item]
         tile.addEventListener('click', (event)=>{
@@ -79,7 +80,7 @@ let clickTile = ()=>{
  * @param {array} resArr 
  * @param {index of the last enetered element} indexHumanPlayed
  */
-let computerTurn = (resArr, indexHumanPlayed)=>{
+function computerTurn(resArr, indexHumanPlayed){
 
 }
 
@@ -88,7 +89,7 @@ let computerTurn = (resArr, indexHumanPlayed)=>{
  * @param {*} arr 
  * @returns a string
  */
-let checkMatching = (arr)=>{
+function checkMatching(arr){
     console.log("In the matching function", arr)
 }
 
