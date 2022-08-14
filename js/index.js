@@ -14,7 +14,7 @@
 let tilediv = document.getElementsByClassName('tile')
 // console.log(tilediv)
 
-let resArr = []
+let resArr = [10,11,12,13,14,15,16,17,18]
 /**
  * The function below adds a click listener to all the div elements that have class tile.
  */
@@ -25,10 +25,25 @@ let clickTile = ()=>{
             if(event.target.textContent === ""){
                 event.target.textContent = "X"
                 resArr[tile.id - 1] = "X"
+                console.log(resArr)
             }
         })
     }
 }
+
+/**
+ * This this the function that will be called when it's time to play the game.
+ */
+let count = 0
+let go = ()=>{
+    // The user will use 'X'
+    // The computer will use 'O'
+    if(count == 0){
+        // This means that the game is just beginning.
+        
+    }
+}
+// console.log(resArr)
 /**
  * This function calculates things
  */
@@ -42,12 +57,7 @@ let clickTile = ()=>{
  * @param {index of the last enetered element} indexHumanPlayed
  */
 let computerTurn = (resArr, indexHumanPlayed)=>{
-    if(resArr.length == 9){
-        // should be game over 
-        console.log(resArr)
-    }else{
-        console.log("It works fine")
-    }
+
 }
 
 /**
@@ -58,3 +68,8 @@ let computerTurn = (resArr, indexHumanPlayed)=>{
 let checkMatching = (arr)=>{
     console.log("In the matching function", arr)
 }
+
+/**
+ * Do the horizontal check to see if it is the same
+ * horizontal check, vertical check and diagnol check.
+ */
