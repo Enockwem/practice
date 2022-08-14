@@ -23,25 +23,11 @@ let checkbox = document.getElementById("yes")
 let resArr = [1,2,3,4,5,6,7,8,9]
 
 let count = 1
-function go(){
-    // now, hold value of the checkbox
-    let checkbool = checkboxFun()
-    if(checkbool){
-        console.log("The user wants to go first!")
-        // while(count <= 9){
-        if(count % 2 == 0){
-            computerTurn()
-            count++
-        }else{
-            clickTile()
-            count++
-        }
-        // }
-    }else{
-        console.log("The user doesn't want to go first")
-    }
-}
-go()
+// function go(){
+//     // now, hold value of the checkbox
+//     let checkbool = checkboxFun()
+// }
+// go()
 /**
  * @returns a boolean
  */
@@ -69,7 +55,7 @@ function clickTile(){
             if(event.target.textContent === ""){
                 event.target.textContent = "X"
                 resArr[tile.id - 1] = "X"
-                console.log(resArr)
+                // console.log(resArr)
             }
         })
     }
@@ -79,7 +65,7 @@ function clickTile(){
 /**
  * This function calculates things
  */
-// clickTile()
+clickTile()
 // checkMatching(resArr)
 // computerTurn(resArr,3)
 // console.log(resArr)
@@ -89,8 +75,10 @@ function clickTile(){
  * @param {index of the last enetered element} indexHumanPlayed
  * In this method, the computer has to use the random Math method to guess what to play next
  */
-function computerTurn(resArr, indexHumanPlayed){
-
+function computerTurn(resArr, indexHumanPlayed, tile){
+    let value = Math.floor(Math.random() +1)
+    resArr[value] = "O"
+    tile[value].textContent = "O"
 }
 
 /**
