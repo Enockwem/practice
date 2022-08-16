@@ -59,14 +59,19 @@ function clickTile(){
             if(event.target.textContent === ""){
                 event.target.textContent = "X"
                 resArr[tile.id - 1] = "X"
-            }
-            let random = Math.floor(Math.random() * 8)
-            if(tilediv.textContent != ""){
-                tilediv[random].textContent = "O"
             }else{
-                random = Math.floor(Math.random()*8)
-                tilediv[random].textContent = "O"
+                console.log("Has already been selected.")
             }
+            // console.log(resArr)
+            // let arr = computerTurn(resArr, tilediv)
+            // console.log(computerTurn(resArr, tilediv))
+            // let random = Math.floor(Math.random() * 8)
+            // if(tilediv.textContent === ""){
+            //     tilediv[random].textContent = "O"
+            // }else{
+            //     random = Math.floor(Math.random()*8)
+            //     tilediv[random].textContent = "O"
+            // }
         })
     }
 }
@@ -75,6 +80,7 @@ function clickTile(){
 /**
  * This function calculates things
  */
+// clickTile(resArr)
 clickTile()
 // checkMatching(resArr)
 // computerTurn(resArr,3)
@@ -85,11 +91,18 @@ clickTile()
  * @param {index of the last enetered element} indexHumanPlayed
  * In this method, the computer has to use the random Math method to guess what to play next
  */
-function computerTurn(resArr, indexHumanPlayed, tile){
-    let value = Math.floor(Math.random() +1)
-    resArr[value] = "O"
-    tile[value].textContent = "O"
-}
+// function computerTurn(arr, /*indexHumanPlayed,*/ tile){
+//     // Check for the vertical friends of indexhuman played
+//     let newArr = []
+//     for(let k of arr){
+//         if(typeof k === 'number'){
+//             newArr.push(k)
+//         }
+//     }
+//     let value = Math.floor(Math.random() * 8)
+//     arr[value] = "O"
+//     tile[value].textContent = "O"
+// }
 
 /**
  * 
