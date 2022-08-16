@@ -21,6 +21,7 @@ let checkbox = document.getElementById("yes")
 
 
 let resArr = [1,2,3,4,5,6,7,8,9]
+let compArr = [...resArr] // This is gonna be used to select the tile that has not been selected.
 
 let count = 1
 
@@ -38,7 +39,7 @@ function go(next){
 function checkboxFun() {
     // If the user checks or not, a value will be returned
     let holdcheck = checkbox.checked
-    checkbox.addEventListener('change', ({target:{checked}}) => {
+    checkbox.addEventListener('click', ({target:{checked}}) => {
         // Check the onclick button
         holdcheck = checked
         // console.log(checked)
@@ -48,31 +49,27 @@ function checkboxFun() {
 }
 
 let checkB = checkboxFun()
-
 /**
  * The function below adds a click listener to all the div elements that have class tile.
  */
+
 function clickTile(){
-    for(let tile of tilediv){
-        // const tile = tilediv[item]
-        tile.addEventListener('click', (event)=>{
-            if(event.target.textContent === ""){
-                event.target.textContent = "X"
-                resArr[tile.id - 1] = "X"
-            }else{
-                console.log("Has already been selected.")
-            }
-            // console.log(resArr)
-            // let arr = computerTurn(resArr, tilediv)
-            // console.log(computerTurn(resArr, tilediv))
-            // let random = Math.floor(Math.random() * 8)
-            // if(tilediv.textContent === ""){
-            //     tilediv[random].textContent = "O"
-            // }else{
-            //     random = Math.floor(Math.random()*8)
-            //     tilediv[random].textContent = "O"
-            // }
-        })
+    if(checkboxFun()){
+        for(let tile of tilediv){
+            // const tile = tilediv[item]
+            tile.addEventListener('click', (event)=>{
+                if(event.target.textContent === ""){
+                    event.target.textContent = "X"
+                    resArr[tile.id - 1] = "X"
+                }else{
+                    console.log("Has already been selected.")
+                }
+
+                // Now it should be the computer to play now.
+            });
+        }
+    }else{
+        console.log("Yes, it's not him to start")
     }
 }
 
