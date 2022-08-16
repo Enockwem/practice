@@ -43,38 +43,35 @@ let checkB = checkboxFun()
  */
 
 function clickTile(){
-    if(checkboxFun()){
-        for(let tile of tilediv){
-            // const tile = tilediv[item]
-            tile.addEventListener('click', (event)=>{
-                if(event.target.textContent === ""){
-                    event.target.textContent = "X"
-                    resArr[tile.id - 1] = "X"
-                    let random = Math.floor(Math.random() * 8)
-                    let count = 0
-                    // Checking whether the number that the computer selects is equal has not been used before
-                    while(true){
-                        if(typeof resArr[random] === 'number'){
-                            break;
+    for(let tile of tilediv){
+        // const tile = tilediv[item]
+        tile.addEventListener('click', (event)=>{
+            if(event.target.textContent === ""){
+                event.target.textContent = "X"
+                resArr[tile.id - 1] = "X"
+                
+                let random = Math.floor(Math.random() * 8)
+                let count = 0
+                // Checking whether the number that the computer selects is equal has not been used before
+                while(true){
+                    if(typeof resArr[random] === 'number'){
+                        break;
+                    }else{
+                        if(count < 9){
+                            random = Math.floor(Math.random() * 8)
+                            count++
                         }else{
-                            if(count < 9){
-                                random = Math.floor(Math.random() * 8)
-                                count++
-                            }else{
-                                break;
-                            }
+                            break;
                         }
                     }
-                    tilediv[random].textContent = "O"
-                    resArr[random] = "O"
-                    console.log(resArr)
-                }else{
-                    console.log("Has already been selected.")
                 }
-            });
-        }
-    }else{
-        console.log("Yes, it's not him to start")
+                tilediv[random].textContent = "O"
+                resArr[random] = "O"
+                console.log(resArr)
+            }else{
+                console.log("Has already been selected.")
+            }
+        });
     }
 }
 
