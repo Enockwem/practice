@@ -71,8 +71,6 @@ function clickTile(){
                 }else{
                     console.log("Has already been selected.")
                 }
-
-                // Now it should be the computer to play now.
             });
         }
     }else{
