@@ -49,7 +49,10 @@ function go(){
             if(event.target.textContent === ""){
                 event.target.textContent = "X"
                 resArr[tile.id - 1] = "X"
-                
+                // After the person playing, now check whether there are any matching tiles.
+                if(checkMatching(resArr)){
+                    console.log("Congratulations")
+                }
                 let random = Math.floor(Math.random() * 8)
                 let count = 0
                 // Checking whether the number that the computer selects is equal has not been used before
@@ -101,10 +104,7 @@ function checkVertical(arr){
     // To get the next three vertical values, you will have to add 1 to the three variables of
     // first, second and third.
     for(let k = 0; k < 3; k++){
-        if(typeof arr[first] !== 'number' 
-           && typeof arr[second] !== "number" 
-           && typeof arr[third] !== 'number'){
-            console.log("It's working")
+        if(arr[first] === arr[second] && arr[second] === arr[third]){
             return true
         }else{
             first += 1
@@ -122,10 +122,7 @@ function checkHorizontal(arr){
     // second and third.
     let first=0, second = 1, third = 2
     for(let k = 0; k < 3; k++){
-        if(typeof arr[first] !== 'number' 
-           && typeof arr[second] !== "number" 
-           && typeof arr[third] !== 'number'){
-            console.log("It's working")
+        if(arr[first] === arr[second] && arr[second] === arr[third]){
             return true
         }else{
             first += 3
