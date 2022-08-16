@@ -68,7 +68,6 @@ function clickTile(){
                     tilediv[random].textContent = "O"
                     resArr[random] = "O"
                     console.log(resArr)
-                    
                 }else{
                     console.log("Has already been selected.")
                 }
@@ -116,8 +115,18 @@ function checkHorizontal(arr){
     // second and third.
     let first=0, second = 1, third = 2
     for(let k = 0; k < 3; k++){
-        console.log(typeof arr[first])
+        if(typeof arr[first] !== 'number' 
+           && typeof arr[second] !== "number" 
+           && typeof arr[third] !== 'number'){
+            console.log("It's working")
+            return true
+        }else{
+            first += 3
+            second += 3
+            third += 3
+        }
     }
+    return false
 }
 
 function checkDiagnol(arr){
