@@ -89,7 +89,10 @@ clickTile()
  * @returns a string
  */
 function checkMatching(arr){
-    console.log("In the matching function", arr)
+    if(checkDiagnol(arr) || checkHorizontal(arr) || checkVertical(arr)){
+        return true
+    }
+    return false
 }
 
 /**
