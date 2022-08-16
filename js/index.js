@@ -22,16 +22,6 @@ let checkbox = document.getElementById("yes")
 
 let resArr = [1,2,3,4,5,6,7,8,9]
 
-let count = 1
-
-function go(next){
-    if(next){
-        clickTile()
-    }else{
-        computerTurn()
-    }
-}
-
 /**
  * @returns a boolean
  */
@@ -60,6 +50,23 @@ function clickTile(){
                 if(event.target.textContent === ""){
                     event.target.textContent = "X"
                     resArr[tile.id - 1] = "X"
+                    let random = Math.floor(Math.random() * 8)
+                    let count = 0
+                    // Checking whether the number that the computer selects is equal has not been used before
+                    while(true){
+                        if(typeof resArr[random] === 'number'){
+                            break;
+                        }else{
+                            if(count < 9){
+                                random = Math.floor(Math.random() * 8)
+                            }else{
+                                break;
+                            }
+                        }
+                    }
+                    tilediv[random].textContent = "O"
+                    resArr[random] = "O"
+                    
                 }else{
                     console.log("Has already been selected.")
                 }
