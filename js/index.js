@@ -21,7 +21,6 @@ let checkbox = document.getElementById("yes")
 
 
 let resArr = [1,2,3,4,5,6,7,8,9]
-let compArr = [...resArr] // This is gonna be used to select the tile that has not been selected.
 
 let count = 1
 
