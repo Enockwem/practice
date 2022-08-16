@@ -81,33 +81,8 @@ function clickTile(){
     }
 }
 
-// console.log(resArr)
-/**
- * This function calculates things
- */
-// clickTile(resArr)
-clickTile()
-// checkMatching(resArr)
-// computerTurn(resArr,3)
-// console.log(resArr)
 
-/**
- * @param {array} resArr 
- * @param {index of the last enetered element} indexHumanPlayed
- * In this method, the computer has to use the random Math method to guess what to play next
- */
-// function computerTurn(arr, /*indexHumanPlayed,*/ tile){
-//     // Check for the vertical friends of indexhuman played
-//     let newArr = []
-//     for(let k of arr){
-//         if(typeof k === 'number'){
-//             newArr.push(k)
-//         }
-//     }
-//     let value = Math.floor(Math.random() * 8)
-//     arr[value] = "O"
-//     tile[value].textContent = "O"
-// }
+clickTile()
 
 /**
  * 
