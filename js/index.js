@@ -59,6 +59,7 @@ function clickTile(){
                         }else{
                             if(count < 9){
                                 random = Math.floor(Math.random() * 8)
+                                count++
                             }else{
                                 break;
                             }
@@ -66,6 +67,7 @@ function clickTile(){
                     }
                     tilediv[random].textContent = "O"
                     resArr[random] = "O"
+                    console.log(resArr)
                     
                 }else{
                     console.log("Has already been selected.")
