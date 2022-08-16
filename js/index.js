@@ -42,7 +42,7 @@ let checkB = checkboxFun()
  * The function below adds a click listener to all the div elements that have class tile.
  */
 
-function clickTile(){
+function go(){
     for(let tile of tilediv){
         // const tile = tilediv[item]
         tile.addEventListener('click', (event)=>{
@@ -76,7 +76,7 @@ function clickTile(){
 }
 
 
-clickTile()
+go()
 
 /**
  * 
