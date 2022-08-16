@@ -103,9 +103,18 @@ function checkVertical(arr){
     // To get the next three vertical values, you will have to add 1 to the three variables of
     // first, second and third.
     for(let k = 0; k < 3; k++){
-        console.log(typeof arr[first])
-        break
+        if(typeof arr[first] !== 'number' 
+           && typeof arr[second] !== "number" 
+           && typeof arr[third] !== 'number'){
+            console.log("It's working")
+            return true
+        }else{
+            first += 1
+            second += 1
+            third += 1
+        }
     }
+    return false
 }
 
 // checkVertical(resArr)
