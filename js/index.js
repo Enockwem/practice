@@ -23,11 +23,15 @@ let checkbox = document.getElementById("yes")
 let resArr = [1,2,3,4,5,6,7,8,9]
 
 let count = 1
-// function go(){
-//     // now, hold value of the checkbox
-//     let checkbool = checkboxFun()
-// }
-// go()
+
+function go(next){
+    if(next){
+        clickTile()
+    }else{
+        computerTurn()
+    }
+}
+
 /**
  * @returns a boolean
  */
@@ -55,7 +59,13 @@ function clickTile(){
             if(event.target.textContent === ""){
                 event.target.textContent = "X"
                 resArr[tile.id - 1] = "X"
-                // console.log(resArr)
+            }
+            let random = Math.floor(Math.random() * 8)
+            if(tilediv.textContent != ""){
+                tilediv[random].textContent = "O"
+            }else{
+                random = Math.floor(Math.random()*8)
+                tilediv[random].textContent = "O"
             }
         })
     }
@@ -106,7 +116,7 @@ function checkVertical(arr){
     }
 }
 
-checkVertical(resArr)
+// checkVertical(resArr)
 function checkHorizontal(arr){
     // There are three horizontal values in the game.
     // To get the next horizontal values, you will have to add 3 to the three variables of first,
