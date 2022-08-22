@@ -6,3 +6,28 @@ body{
     align-items: center;
     background-color: hsl(185, 41%, 84%);
 }
+
+.container{
+    width: 600px;
+    height: 350px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.right{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.left{
+    width: 300px;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
