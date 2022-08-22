@@ -9,36 +9,70 @@
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
+  <main class="container">
+    <div class="right">
+      <!-- bill section  -->
+      <div class="bill">
+        <h5>Bill</h5>
+        <div class="input-div">
+          <img src="./images/icon-dollar.svg" alt="dollar-sign">
+          <input class="bill-amount" type="text" placeholder="0" required>
+        </div>
+      </div>
 
-  Bill
+      <!-- select tip section  -->
+      <div class="tip">
+        <p>Select Tip %</p>
+        <div>
+          <p>5%</p>
+        </div>
+        <div>
+          <p>10%</p>
+        </div>
+        <div>
+          <p>15%</p>
+        </div>
+        <div>
+          <p>25%</p>
+        </div>
+        <div>
+          <p>50%</p>
+        </div>
+        <div class="custom">
+          <p>Custom</p>
+        </div>
+      </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <!-- number of people section  -->
+      <div class="number-of-people">
+        <div>
+          <img src="./images/icon-person.svg" alt="image of person">
+          <input class="num-people" type="text" placeholder="0" required>
+        </div>
+      </div>
+    </div>
+    <div class="left">
+      <div class="tip-amount">
+        <p>Tip Amount <br><span>/ person</span></p>
+      </div>
 
-  Number of People
+      <div class="total">
+        <p>Total <br><span>/ person</span></p>
+      </div>
 
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+      <button class="reset-button">Reset</button>
+    </div>
+  </main>
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
