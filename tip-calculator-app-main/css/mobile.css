@@ -1,0 +1,12 @@
+@media (max-width:375px) {
+    body{
+        height: 100vh;
+        width: 100%;
+    }
+    .container{
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
