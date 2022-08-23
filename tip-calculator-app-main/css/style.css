@@ -125,6 +125,7 @@ input::placeholder{
     font-family: 'Space Mono';
     font-weight: 700;
     font-size: 24px;
+    color: hsl(172, 67%, 45%);
 }
 
 .empty-message{
@@ -145,4 +146,12 @@ h5{
 
 .right h5{
     opacity: 0.6;
+}
+
+.tip-amount, .total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 260px;
+    margin: 10px;
 }
