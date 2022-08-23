@@ -8,5 +8,49 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+    .right{
+        height: 300px;
+        width: 95%;
+        padding: 0px;
+    }
+    .left{
+        height: 200px;
+        width: 80%;
+    }
+
+    .tip-grid{
+        display: grid;
+        grid-template-columns: repeat(2,110px);
+        grid-template-rows: repeat(3, 35px);
+        /* border: 1px solid red; */
+        height: 130px;
+    }
+
+    /* .input-div{
+        height: 40px;
+    } */
+
+    .custom p{
+        outline: none;
+    }
+
+    .number-of-people{
+        margin-top: 15px;
+    }
+
+    .reset-button{
+        width: 93%;
+    }
+
+    /* .bill{
+        border: 1px solid green;
+    } */
+
+    .tip{
+        /* border: 1px solid yellow; */
+        height: 150px;
+        margin-top: 15px;
     }
 }
