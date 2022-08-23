@@ -9,7 +9,7 @@ body{
 
 .container{
     width: 650px;
-    height: 350px;
+    height: 300px;
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -25,6 +25,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
+    /* border: 2px solid red; */
 }
 
 .left{
@@ -52,9 +53,14 @@ body{
 .reset-button:disabled{
     background-color:   hsl(186, 14%, 43%);
 }
+.bill{
+    height: 80px;
+    /* border: 1px solid green; */
+}
 .tip{
     /* border: 1px solid blue; */
-    height: 130px;
+    height: 110px;
+    /* border: 1px solid yellow; */
 }
 .tip-grid{
     width: 300px;
@@ -65,7 +71,10 @@ body{
     gap: 10px;
     /* background-color: red; */
 }
-
+.number-of-people{
+    height: 80px;
+    /* border: 1px solid red; */
+}
 .tile{
     background-color: hsl(183, 100%, 15%);
     text-align: center;
@@ -124,7 +133,7 @@ input::placeholder{
 .left p{
     font-family: 'Space Mono';
     font-weight: 700;
-    font-size: 24px;
+    font-size: 35px;
     color: hsl(172, 67%, 45%);
 }
 
@@ -147,14 +156,16 @@ h5{
 
 .right h5{
     opacity: 0.6;
+    margin: 0;
 }
 
 .tip-amount, .total{
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 260px;
-    margin: 10px;
+    align-items: center;
+    margin:10px;
 }
 
 /* .custom p{
