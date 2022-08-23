@@ -16,6 +16,7 @@ body{
     justify-content: space-evenly;
     padding: 10px;
     border-radius: 10px;
+    position: relative;
 }
 
 .right{
@@ -32,6 +33,7 @@ body{
     padding: 10px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .reset-button{
@@ -43,6 +45,11 @@ body{
     color: hsl(183, 100%, 15%);
     font-family: 'Space Mono';
     text-transform: uppercase;
+    position: absolute;
+    bottom:30px;
+}
+.reset-button:disabled{
+    background-color:   hsl(186, 14%, 43%);
 }
 .tip{
     /* border: 1px solid blue; */
