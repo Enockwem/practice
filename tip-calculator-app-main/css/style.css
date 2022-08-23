@@ -8,8 +8,8 @@ body{
 }
 
 .container{
-    width: 650px;
-    height: 300px;
+    max-width: 650px;
+    max-height: 300px;
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -20,7 +20,7 @@ body{
 }
 
 .right{
-    width: 300px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -54,17 +54,17 @@ body{
     background-color:   hsl(186, 14%, 43%);
 }
 .bill{
-    height: 80px;
+    max-height: 80px;
     /* border: 1px solid green; */
 }
 .tip{
     /* border: 1px solid blue; */
-    height: 110px;
+    max-height: 110px;
     /* border: 1px solid yellow; */
 }
 .tip-grid{
-    width: 300px;
-    height: 80px;
+    max-width: 300px;
+    max-height: 80px;
     display: grid;
     grid-template-columns: repeat(3, 80px);
     grid-template-rows: repeat(3,30px);
@@ -72,7 +72,7 @@ body{
     /* background-color: red; */
 }
 .number-of-people{
-    height: 80px;
+    max-height: 80px;
     /* border: 1px solid red; */
 }
 .tile{
@@ -107,8 +107,8 @@ body{
 input{
     border: none;
     outline: none;
-    height: 25px;
-    width: 250px;
+    max-height: 25px;
+    max-width: 250px;
     text-align: right;
     font-weight: 700;
     font-family: 'Space Mono';
@@ -121,7 +121,7 @@ input::placeholder{
 }
 
 .input-div{
-    height: 40px;
+    max-height: 40px;
     border-radius: 5px;
     background-color: hsl(185, 41%, 84%);
     width: 280px;
