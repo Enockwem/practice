@@ -156,3 +156,15 @@ h5{
     width: 260px;
     margin: 10px;
 }
+
+/* .custom p{
+    outline: none;
+    border: none;
+    set the onblur and onfocus of the content editable.
+    when it loses center elements
+} */
+.custom p{
+    width: 80px;
+    height: 30px;
+    text-align: center;
+}
