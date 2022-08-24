@@ -5,7 +5,8 @@ const bill = document.getElementById("bill-amount")
 const numPeople = document.getElementById("num-people")
 const tipAmount = document.getElementById("tip-amount")
 const total = document.getElementById("total")
-
+const tip_input = document.getElementById("tipAmount")
+const people = document.getElementById("people")
 
 let bill_input = ""
 bill.addEventListener('input',(event)=>{
@@ -15,6 +16,7 @@ bill.addEventListener('input',(event)=>{
         tipAmount.innerHTML = "0.00"
     }else{
         tipAmount.innerHTML = bill_input
+        event.target.value = thousandOperator(removeComma(bill_input))
     }
 })
 
@@ -26,6 +28,8 @@ bill.onblur = function(){
         p.innerHTML = "Can't be empty"
         p.classList.add("cantBe")
         empty.append(p)
+        tip_input.classList.remove("input-div")
+        tip_input.classList.add("input-empty")
     }
 }
 
@@ -35,5 +39,7 @@ bill.onfocus = function(){
     let p = document.querySelector(".cantBe")
     if(p !== null){
         empty.removeChild(p)
+        tip_input.classList.remove("input-empty")
+        tip_input.classList.add("input-div")
     }
 }
