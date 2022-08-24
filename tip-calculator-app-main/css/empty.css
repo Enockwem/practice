@@ -16,9 +16,20 @@
     justify-content: space-between;
     align-items: center;
 }
+.empty-message-num{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.cantBebill{
+    color: red;
+    font-family: 'Space Mono';
+    margin: 0;
+    font-size: 10px;
+}
 
-
-.cantBe{
+.cantBeNum{
     color: red;
     font-family: 'Space Mono';
     margin: 0;
