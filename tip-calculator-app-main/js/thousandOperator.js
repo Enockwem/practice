@@ -24,14 +24,20 @@ export function thousandOperator(amount){
         }
     }else{
         let len = str.length
-        if(len%3 != 0){
-            if(len%3 === 1){
-                result = str.slice(0,1)+","+str.slice(1).match(regex).join(",")
-            }else{
-                result = str.slice(0,2)+","+str.slice(2).match(regex).join(",")
-            }
+        if(len === 1){
+            result = str
+        }else if(len === 2){
+            result = str
         }else{
-            result = str.match(regex).join(",")
+            if(len%3 != 0){
+                if(len%3 === 1){
+                    result = str.slice(0,1)+","+str.slice(1).match(regex).join(",")
+                }else{
+                    result = str.slice(0,2)+","+str.slice(2).match(regex).join(",")
+                }
+            }else{
+                result = str.match(regex).join(",")
+            }
         }
     }
     return result
