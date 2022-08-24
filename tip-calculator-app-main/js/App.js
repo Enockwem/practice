@@ -7,6 +7,7 @@ const tipAmount = document.getElementById("tip-amount")
 const total = document.getElementById("total")
 const tip_input = document.getElementById("tipAmount")
 const people = document.getElementById("people")
+const but = document.getElementById("reset")
 
 let bill_input = ""
 let num_input = ""
@@ -92,3 +93,4 @@ document.querySelectorAll('.tile').forEach((tile)=>{
         }
     })
 })
+
