@@ -1,0 +1,33 @@
+.input-empty{
+    border: 2px solid red;
+    height: 40px;
+    border-radius: 5px;
+    background-color: hsl(185, 41%, 84%);
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.empty-message{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.cantBe{
+    color: red;
+    font-family: 'Space Mono';
+    margin: 0;
+    font-size: 10px;
+}
+
+.empty-bill-input{
+    color: red;
+}
+.empty-bill-input::placeholder{
+    color: red;
+}
