@@ -154,6 +154,8 @@ input::placeholder{
 .cantBe{
     color: red;
     font-family: 'Space Mono';
+    margin: 0;
+    font-size: 10px;
 }
 .input-empty{
     border: 2px solid red;
