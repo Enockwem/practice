@@ -159,6 +159,13 @@ input::placeholder{
 }
 .input-empty{
     border: 2px solid red;
+    height: 40px;
+    border-radius: 5px;
+    background-color: hsl(185, 41%, 84%);
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h5{
