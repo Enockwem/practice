@@ -10,15 +10,12 @@ const people = document.getElementById("people")
 
 let bill_input = ""
 let num_input = ""
+let select_tip;
+
 bill.addEventListener('input',(event)=>{
     bill_input = event.target.value 
-    console.log(bill_input)
-    if(bill_input === ""){
-        tipAmount.innerHTML = "0.00"
-    }else{
-        tipAmount.innerHTML = bill_input
-        event.target.value = thousandOperator(removeComma(bill_input))
-    }
+    // console.log(bill_input)
+    event.target.value = thousandOperator(removeComma(bill_input))
 })
 
 // Using the onblur and onfocus
@@ -51,11 +48,9 @@ bill.onfocus = function(){
  */
 numPeople.addEventListener('input',(event)=>{
     num_input = event.target.value
-    if(num_input === ""){
+    // if(num_input !== ""){
         
-    }else{
-        total.innerHTML = num_input
-    }
+    // }
 })
 
 numPeople.onblur = function(){
@@ -79,3 +74,21 @@ numPeople.onfocus = function(){
         people.classList.add("input-div")
     }
 }
+
+
+/**
+ * Now we are looking at making calculations
+ * Adding the onclick listener to the div in the selet tip % option
+ */
+document.querySelectorAll('.tile').forEach((tile)=>{
+    tile.addEventListener('click',()=>{
+        let k = tile.textContent.split("%")[0].trim()
+        console.log(bill_input)
+        console.log(num_input)
+        console.log(k)
+        if(bill_input !== "" && num_input !== ""){
+            tipAmount.innerHTML = Number(removeComma(bill_input))/(+num_input)
+            total.innerHTML = ((Number(num_input) * (Number(k)))/100) * Number(removeComma(bill_input))
+        }
+    })
+})
