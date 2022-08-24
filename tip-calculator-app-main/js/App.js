@@ -84,13 +84,13 @@ numPeople.onfocus = function(){
 document.querySelectorAll('.tile').forEach((tile)=>{
     tile.addEventListener('click',()=>{
         let k = tile.textContent.split("%")[0].trim()
-        console.log(bill_input)
-        console.log(num_input)
-        console.log(k)
         if(bill_input !== "" && num_input !== ""){
-            tipAmount.innerHTML = Number(removeComma(bill_input))/(+num_input)
-            total.innerHTML = ((Number(num_input) * (Number(k)))/100) * Number(removeComma(bill_input))
+            tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(k)/100 * Number(removeComma(bill_input))))/Number(num_input))
+            total.innerHTML = Math.round(Number(removeComma(bill_input))/(+num_input))
         }
     })
 })
 
+but.onclick = function(){
+    location.reload()
+}
