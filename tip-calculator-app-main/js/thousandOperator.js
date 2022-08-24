@@ -36,7 +36,11 @@ export function thousandOperator(amount){
                     result = str.slice(0,2)+","+str.slice(2).match(regex).join(",")
                 }
             }else{
-                result = str.match(regex).join(",")
+                if(len === 0){
+                    result = ""
+                }else{
+                    result = str.match(regex).join(",")
+                }
             }
         }
     }
