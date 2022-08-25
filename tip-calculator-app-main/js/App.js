@@ -52,7 +52,7 @@ numPeople.addEventListener('input',(event)=>{
     num_input = event.target.value
     if(bill_input !== "" && select_tip !== ""){
         tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(select_tip)/100 * Number(removeComma(bill_input))))/Number(num_input))
-            total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
+        total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
     }
 })
 
