@@ -17,16 +17,16 @@ let select_tip = "";
 bill.addEventListener('input',(event)=>{
     bill_input = event.target.value 
     event.target.value = thousandOperator(removeComma(bill_input))
-    if(tipAmount.innerHTML === "0.00" && total.innerHTML === "0.00"){
-        but.disabled = true
-    }else{
-        but.disabled = false
-    }
     if(bill_input !== ""){
         if(num_input !== "" && select_tip !== ""){
             tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(select_tip)/100 * Number(removeComma(bill_input))))/Number(num_input))
-                total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
+            total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
         }
+    }
+        if(tipAmount.textContent !== "0.00" && total.textContent !== "0.00"){
+        but.disabled = false
+    }else{
+        but.disabled = true
     }
 })
 
@@ -129,8 +129,6 @@ editable.oninput = function(){
 /**
  * disabling the reset button
  */
-if(bill_input === "" && num_input === ""){
+if(tipAmount.innerHTML === "0.00" && total.innerHTML === "0.00"){
     but.disabled = true
-}else{
-    but.disabled = false
 }
