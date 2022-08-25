@@ -8,6 +8,7 @@ const total = document.getElementById("total")
 const tip_input = document.getElementById("tipAmount")
 const people = document.getElementById("people")
 const but = document.getElementById("reset")
+const editable = document.getElementById(".editable")
 
 let bill_input = ""
 let num_input = ""
