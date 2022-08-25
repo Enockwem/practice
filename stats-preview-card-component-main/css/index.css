@@ -5,3 +5,34 @@ body{
     align-items: center;
 }
 
+.container{
+    background-color:  hsl(233, 47%, 7%);
+    height: 70%;
+    width: 74%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    width: 80%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    border: 5px solid yellow;
+}
+
+.right{
+    background-color: hsl(244, 38%, 16%);
+    height: 72.5%;
+}
+
+.left{
+    height: 72.5%;
+    background-color:  hsl(277, 64%, 61%);
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
