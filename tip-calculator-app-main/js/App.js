@@ -9,10 +9,13 @@ const tip_input = document.getElementById("tipAmount")
 const people = document.getElementById("people")
 const but = document.getElementById("reset")
 const editable = document.getElementById("editable")
-
+const collection = document.querySelectorAll('.tile')
+const tileDiv = [...collection]
+console.log(collection)
 let bill_input = ""
 let num_input = ""
 let select_tip = "";
+let arrColor = new Array(5).fill("gray") // This should hold the tile that has a different color
 
 bill.addEventListener('input',(event)=>{
     bill_input = event.target.value 
@@ -101,22 +104,26 @@ numPeople.onfocus = function(){
  * Now we are looking at making calculations
  * Adding the onclick listener to the div in the selet tip % option
  */
-document.querySelectorAll('.tile').forEach((tile)=>{
-    tile.addEventListener('click',()=>{
-        let k = tile.textContent.split("%")[0].trim()
-        select_tip = k
-        if(bill_input !== "" && num_input !== ""){
-            tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(k)/100 * Number(removeComma(bill_input))))/Number(num_input))
-            total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
-        }
+for(let tile of collection){
+    // collection.forEach((tile)=>{
+        tile.addEventListener('click',()=>{
+            let k = tile.textContent.split("%")[0].trim()
+            
+            select_tip = k
 
-        if(tipAmount.textContent !== "0.00" && total.textContent !== "0.00"){
-            but.disabled = false
-        }else{
-            but.disabled = true
-        }
-    })
-})
+            if(bill_input !== "" && num_input !== ""){
+                tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(k)/100 * Number(removeComma(bill_input))))/Number(num_input))
+                total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
+            }
+    
+            if(tipAmount.textContent !== "0.00" && total.textContent !== "0.00"){
+                but.disabled = false
+            }else{
+                but.disabled = true
+            }
+        })
+    // })
+}
 
 but.onclick = function(){
     location.reload()
