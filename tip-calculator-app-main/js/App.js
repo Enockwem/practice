@@ -67,6 +67,11 @@ numPeople.addEventListener('input',(event)=>{
             total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
         }
     }
+    if(tipAmount.textContent !== "0.00" && total.textContent !== "0.00"){
+        but.disabled = false
+    }else{
+        but.disabled = true
+    }
 })
 
 numPeople.onblur = function(){
