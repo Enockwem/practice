@@ -112,12 +112,10 @@ for(let tile of tileDiv){
 
             if(arrColor.includes("changed")){
                 let va = arrColor.indexOf("changed")
-                console.log(va)
                 tileDiv[va].classList.remove("changeTipColor")
                 arrColor[va] = "gray"
             }
             select_tip = k
-            console.log(arrColor)
             let index = tileDiv.indexOf(tile) // This holds the index of tile being clicked
             tile.classList.add("changeTipColor")
             arrColor[index] = "changed"
@@ -142,11 +140,21 @@ but.onclick = function(){
 
 editable.onfocus = function(){
     editable.textContent = ""
+    if(arrColor.includes("changed")){
+        let index = arrColor.indexOf("changed")
+        arrColor[index] = "gray"
+        tileDiv[index].classList.remove("changeTipColor")
+    }
 }
 
 editable.oninput = function(){
     let k = editable.textContent
     select_tip = k
+    if(arrColor.includes("changed")){
+        let index = arrColor.indexOf("changed")
+        arrColor[index] = "gray"
+        tileDiv[index].classList.remove("changeTipColor")
+    }
     if(k !== ""){
         if(bill_input !== "" && num_input !== ""){
             tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(k)/100 * Number(removeComma(bill_input))))/Number(num_input))
