@@ -20,18 +20,21 @@ body{
     display: grid;
     grid-template-columns: repeat(2, 50%);
     border-radius: 5px;
+    /* border: 2px solid red; */
 }
 
 .left{
     background-color: hsl(244, 38%, 16%);
-    height: 100%;
+    height: 86%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 
 }
-
+.inside-left{
+    margin: 50px;
+}
 .right{
-    height: 100%;
+    height: 86%;
     background-color:  hsl(277, 64%, 61%);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
