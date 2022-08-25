@@ -28,7 +28,7 @@ body{
     height: 86%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-
+    position: relative;
 }
 .inside-left{
     margin: 50px;
@@ -45,4 +45,13 @@ img{
     height: 100%;
     width: 100%;
     opacity: 0.4;
+}
+
+.bottom-things{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 5px;
+    width: 70%;
 }
