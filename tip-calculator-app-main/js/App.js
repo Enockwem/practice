@@ -16,8 +16,11 @@ let select_tip = "";
 
 bill.addEventListener('input',(event)=>{
     bill_input = event.target.value 
-    // console.log(bill_input)
     event.target.value = thousandOperator(removeComma(bill_input))
+    if(num_input !== "" && select_tip !== ""){
+        tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(select_tip)/100 * Number(removeComma(bill_input))))/Number(num_input))
+            total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
+    }
 })
 
 // Using the onblur and onfocus
