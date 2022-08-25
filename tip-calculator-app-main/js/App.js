@@ -17,6 +17,11 @@ let select_tip = "";
 bill.addEventListener('input',(event)=>{
     bill_input = event.target.value 
     event.target.value = thousandOperator(removeComma(bill_input))
+    if(tipAmount.innerHTML === "0.00" && total.innerHTML === "0.00"){
+        but.disabled = true
+    }else{
+        but.disabled = false
+    }
     if(bill_input !== ""){
         if(num_input !== "" && select_tip !== ""){
             tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(select_tip)/100 * Number(removeComma(bill_input))))/Number(num_input))
