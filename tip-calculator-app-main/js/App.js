@@ -135,6 +135,7 @@ for(let tile of tileDiv){
     // })
 }
 
+// Reloading the index.html file using the reset button.
 but.onclick = function(){
     location.reload()
 }
