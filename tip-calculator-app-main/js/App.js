@@ -53,9 +53,12 @@ bill.onfocus = function(){
  */
 numPeople.addEventListener('input',(event)=>{
     num_input = event.target.value
-    if(bill_input !== "" && select_tip !== ""){
-        tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(select_tip)/100 * Number(removeComma(bill_input))))/Number(num_input))
-        total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
+    console.log(select_tip)
+    if(num_input !== ""){
+        if(bill_input !== "" && select_tip !== ""){
+            tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(select_tip)/100 * Number(removeComma(bill_input))))/Number(num_input))
+            total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
+        }
     }
 })
 
@@ -107,8 +110,11 @@ editable.onfocus = function(){
 
 editable.oninput = function(){
     let k = editable.textContent
-    if(bill_input !== "" && num_input !== ""){
-        tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(k)/100 * Number(removeComma(bill_input))))/Number(num_input))
-        total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
+    select_tip = k
+    if(k !== ""){
+        if(bill_input !== "" && num_input !== ""){
+            tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(k)/100 * Number(removeComma(bill_input))))/Number(num_input))
+            total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
+        }
     }
 }
