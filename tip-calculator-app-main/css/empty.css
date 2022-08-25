@@ -42,3 +42,8 @@
 .empty-bill-input::placeholder{
     color: red;
 }
+
+.changeTipColor{
+    background-color: hsl(172, 67%, 45%);
+    color: black;
+}
