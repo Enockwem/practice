@@ -12,7 +12,7 @@ const editable = document.getElementById("editable")
 
 let bill_input = ""
 let num_input = ""
-let select_tip;
+let select_tip = "";
 
 bill.addEventListener('input',(event)=>{
     bill_input = event.target.value 
@@ -50,9 +50,10 @@ bill.onfocus = function(){
  */
 numPeople.addEventListener('input',(event)=>{
     num_input = event.target.value
-    // if(num_input !== ""){
-        
-    // }
+    if(bill_input !== "" && select_tip !== ""){
+        tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(select_tip)/100 * Number(removeComma(bill_input))))/Number(num_input))
+            total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
+    }
 })
 
 numPeople.onblur = function(){
@@ -85,6 +86,7 @@ numPeople.onfocus = function(){
 document.querySelectorAll('.tile').forEach((tile)=>{
     tile.addEventListener('click',()=>{
         let k = tile.textContent.split("%")[0].trim()
+        select_tip = k
         if(bill_input !== "" && num_input !== ""){
             tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(k)/100 * Number(removeComma(bill_input))))/Number(num_input))
             total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
