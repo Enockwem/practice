@@ -8,7 +8,7 @@ const total = document.getElementById("total")
 const tip_input = document.getElementById("tipAmount")
 const people = document.getElementById("people")
 const but = document.getElementById("reset")
-const editable = document.getElementById(".editable")
+const editable = document.getElementById("editable")
 
 let bill_input = ""
 let num_input = ""
@@ -87,11 +87,23 @@ document.querySelectorAll('.tile').forEach((tile)=>{
         let k = tile.textContent.split("%")[0].trim()
         if(bill_input !== "" && num_input !== ""){
             tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(k)/100 * Number(removeComma(bill_input))))/Number(num_input))
-            total.innerHTML = Math.round(Number(removeComma(bill_input))/(+num_input))
+            total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
         }
     })
 })
 
 but.onclick = function(){
     location.reload()
+}
+
+editable.onfocus = function(){
+    editable.textContent = ""
+}
+
+editable.oninput = function(){
+    let k = editable.textContent
+    if(bill_input !== "" && num_input !== ""){
+        tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(k)/100 * Number(removeComma(bill_input))))/Number(num_input))
+        total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
+    }
 }
