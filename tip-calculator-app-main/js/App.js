@@ -12,7 +12,6 @@ const editable = document.getElementById("editable")
 const collection = document.querySelectorAll('.tile')
 const tileDiv = [...collection]
 
-console.log(tileDiv)
 let bill_input = ""
 let num_input = ""
 let select_tip = "";
