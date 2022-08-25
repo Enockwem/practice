@@ -120,3 +120,12 @@ editable.oninput = function(){
         }
     }
 }
+
+/**
+ * disabling the reset button
+ */
+if(bill_input === "" && num_input === ""){
+    but.disabled = true
+}else{
+    but.disabled = false
+}
