@@ -108,7 +108,7 @@ for(let tile of collection){
     // collection.forEach((tile)=>{
         tile.addEventListener('click',()=>{
             let k = tile.textContent.split("%")[0].trim()
-            
+
             select_tip = k
 
             if(bill_input !== "" && num_input !== ""){
