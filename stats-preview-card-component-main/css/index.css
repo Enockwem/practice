@@ -3,6 +3,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: hsla(0,0%,100%, 0.75);
 }
 
 .container{
@@ -54,4 +55,26 @@ img{
     position: absolute;
     bottom: 5px;
     width: 70%;
+}
+
+.smaller{
+    font-size: 7px;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+h2{
+    font-size: 30px;
+}
+h5{
+    font-size: 15px;
+}
+
+p{
+    opacity: 0.5;
+    text-align: left;
+    font-size: 15px;
+}
+
+.insight{
+    color: hsl(277, 64%, 61%);
 }
