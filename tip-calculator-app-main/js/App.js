@@ -11,7 +11,8 @@ const but = document.getElementById("reset")
 const editable = document.getElementById("editable")
 const collection = document.querySelectorAll('.tile')
 const tileDiv = [...collection]
-console.log(collection)
+
+console.log(tileDiv)
 let bill_input = ""
 let num_input = ""
 let select_tip = "";
@@ -104,13 +105,22 @@ numPeople.onfocus = function(){
  * Now we are looking at making calculations
  * Adding the onclick listener to the div in the selet tip % option
  */
-for(let tile of collection){
+for(let tile of tileDiv){
     // collection.forEach((tile)=>{
         tile.addEventListener('click',()=>{
             let k = tile.textContent.split("%")[0].trim()
 
+            if(arrColor.includes("changed")){
+                let va = arrColor.indexOf("changed")
+                console.log(va)
+                tileDiv[va].classList.remove("changeTipColor")
+                arrColor[va] = "gray"
+            }
             select_tip = k
-
+            console.log(arrColor)
+            let index = tileDiv.indexOf(tile) // This holds the index of tile being clicked
+            tile.classList.add("changeTipColor")
+            arrColor[index] = "changed"
             if(bill_input !== "" && num_input !== ""){
                 tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(k)/100 * Number(removeComma(bill_input))))/Number(num_input))
                 total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
