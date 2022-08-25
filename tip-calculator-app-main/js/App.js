@@ -109,6 +109,12 @@ document.querySelectorAll('.tile').forEach((tile)=>{
             tipAmount.innerHTML = Math.round((Number(removeComma(bill_input)) - (Number(k)/100 * Number(removeComma(bill_input))))/Number(num_input))
             total.innerHTML = Math.floor(Number(removeComma(bill_input))/(+num_input))
         }
+
+        if(tipAmount.textContent !== "0.00" && total.textContent !== "0.00"){
+            but.disabled = false
+        }else{
+            but.disabled = true
+        }
     })
 })
 
