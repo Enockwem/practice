@@ -60,6 +60,13 @@ export default class NotesView{
 
     // Create an update notes function
     updateNotesList(notes){
-        
+        const  itemContainer = this.root.querySelector(".notes__list");
+
+
+        for (const note of notes) {
+            const html = this._createListItemHTML(note.id, note.title, note.body, new Date(note.updated))
+
+            itemContainer.insertAdjacentHTML("beforeend", html)
+        }
     }
 }
