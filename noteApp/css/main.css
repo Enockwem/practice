@@ -24,17 +24,28 @@ body{
 
 .notes__list-item{
     padding: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 
+.notes__list__item-selected{
+    font-weight: bold;
+    background-color: rgba(189, 186, 186, 0.282);
+}
 .notes__list__item-title{
     font-size: 1.2em;
     font-family: sans-serif;
+    margin: 5px;
 }
 
+.notes__list__item-body{
+    margin: 5px;
+}
 .notes__list__item-update{
     text-align: right;
     font-style: italic;
     color: grey;
+    margin: 5px;
 }
 .notes__preview-container{
     display: flex;
@@ -58,7 +69,7 @@ body{
 
 
 button{
-    width: 95%;
+    width: 100%;
     height: 2.5em;
     background-color: rgb(12, 138, 104);
     border-radius: 10px;
