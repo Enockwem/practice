@@ -39,6 +39,9 @@ export default class NotesView{
                 this.onNoteEdit(inputT, inputB);
             });
         });
+
+        // note preview visibility 
+        this.updateNotePreviewVisibility(false)
     }
 
     _createListItemHTML(id, title, body, updated){
@@ -85,5 +88,9 @@ export default class NotesView{
                 }
             })
         });
+    }
+
+    updateNotePreviewVisibility(visible){
+        this.root.querySelector(".notes__preview-container").style.visibility = visible ? "visible" : "hidden"
     }
 }
