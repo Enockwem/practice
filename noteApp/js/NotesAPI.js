@@ -33,6 +33,12 @@ export default class NotesAPI{
     }
 
     static deleteNote(id){
-        
+        // luke 1: 46-50
+        // 1 samuel 2: 1- 10
+        // Isaiah 54:1
+        const notes = this.getAllNotes()
+        const newNotes = notes.filter(note => note.id !== id)
+
+        localStorage.setItem('notesApp-storage',JSON.stringify(newNotes))
     }
 }
