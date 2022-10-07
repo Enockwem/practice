@@ -23,8 +23,10 @@ export default class App{
     }
 
     _setActiveNotes(note){
-        
+        this.activeNote = note;
     }
+
+    
     _handler(){
         return{
             onNoteSelect: noteId =>{
