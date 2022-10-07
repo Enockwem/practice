@@ -1,11 +1,25 @@
+import NotesView from './NotesView.js'
 import NotesAPI from './NotesAPI.js'
 
-console.log(NotesAPI.getAllNotes())
+const app = document.getElementById('app')
 
-// NotesAPI.saveNote({
-//     id: 12134,
-//     title: "New note",
-//     body: "I am learning programming"
-// })
+const view = new NotesView(app, {
+    onNoteAdd(){
+        console.log("I have clicked it")
+    },
 
-NotesAPI.deleteNote(68957)
+    onNoteSelect(id){
+        console.log("The Item selected is ", id)
+    },
+
+    onNoteDelete(id){
+        NotesAPI.deleteNote(id);
+    },
+
+    onNoteEdit(inputT, inputB){
+        console.log(inputT);
+        console.log(inputB)
+    }
+}) 
+
+view.updateNotesList(NotesAPI.getAllNotes())
