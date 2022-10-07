@@ -10,13 +10,22 @@ export default class NotesAPI{
     static saveNote(noteToSave){
         const notes = this.getAllNotes()
 
+        const existing = notes.find(note=>{note.id === noteToSave.id})
 
-        const i = Math.floor(Math.random() * 100000)
-        const timeStamp = new Date().toISOString()
+        if(existing){
+            // Just have to edit or update.
+            existing.title = noteToSave.title
+            existing.body = noteToSave.body
+            existing.updated = new Date().toISOString()
+        }else{
+            // This is when you are making a new note
+            const i = Math.floor(Math.random() * 100000)
+            const timeStamp = new Date().toISOString()
 
-        noteToSave.id = i
-        noteToSave.updated = timeStamp
-        notes.push(noteToSave)
+            noteToSave.id = i
+            noteToSave.updated = timeStamp
+            notes.push(noteToSave)
+        }
 
         // Now save to the localstorage.
         localStorage.setItem("notesApp-storage", JSON.stringify(notes))
@@ -24,6 +33,6 @@ export default class NotesAPI{
     }
 
     static deleteNote(id){
-
+        
     }
 }
