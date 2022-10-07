@@ -27,6 +27,18 @@ export default class NotesView{
         btnAdd.addEventListener('click',()=>{
             // This method should communicate the click to the main.js
             this.onNoteAdd();
-        })
+        });
+
+        // Now, working with the input fields.
+        [inpTitle,inpBody].forEach(inputField=>{
+            // Adding a listener to each inputfield.
+            inputField.addEventListener("blur", ()=>{
+                const inputT = inpTitle.value.trim();
+                const inputB = inpBody.value.trim();
+
+                // Now, call the method that will communicate to the main controller, 'main.js'
+                this.onNoteEdit(inputT, inputB);
+            });
+        });
     }
 }
