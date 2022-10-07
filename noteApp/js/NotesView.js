@@ -45,7 +45,7 @@ export default class NotesView{
         const MAX_LENGHT_MESSAGE = 100;
 
         return `
-        <div class="notes__list-item notes__list__item-selected">
+        <div class="notes__list-item" data-note-id=${id}>
             <div class="notes__list__item-title">${title}</div>
             <div class="notes__list__item-body">
                 ${body.substring(0, MAX_LENGHT_MESSAGE)}
@@ -68,5 +68,22 @@ export default class NotesView{
 
             itemContainer.insertAdjacentHTML("beforeend", html)
         }
+
+        // Giving the items list a click listener.
+        itemContainer.querySelectorAll(".notes__list-item").forEach(noteItem =>{
+            noteItem.addEventListener("click",()=>{
+                this.onNoteSelect(noteItem.dataset.noteId)
+            });
+
+            // Double click.
+            noteItem.addEventListener("dblclick", ()=>{
+                const doDelete = confirm("Are you sure you want to delete this note?")
+
+                if(doDelete){
+                    // communicate to the controller.
+                    this.onNoteDelete(noteItem.dataset.noteId);
+                }
+            })
+        });
     }
 }
