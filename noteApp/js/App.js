@@ -18,23 +18,36 @@ export default class App{
         }
     }
 
-    _setNotes(){
-
+    _setNotes(notes){
+        this.notes = notes;
+        this.view.updateNotesList(notes);
+        this.view.updateActiveNotes(notes.length > 0)
     }
 
-    _setActiveNotes(note){
+    _setActiveNote(note){
         this.activeNote = note;
+        this.view.updateActiveNotes(note)
     }
 
 
     _handler(){
+        // call the api from this handler.
         return{
             onNoteSelect: noteId =>{
-                console.log("Note selected is "+ noteId)
+                // console.log("Note selected is "+ noteId)
+                const selectedNote = this.notes.find(note => note.id === noteId);
+
+                this._setActiveNote(selectedNote)
             },
 
             onNoteAdd: ()=>{
-                console.log("Note add");
+                const newNote = {
+                    title: "New note ...",
+                    body: "Write here ..."
+                }
+
+                NotesAPI.saveNote(newNote)
+                this._refreshNotes()
             },
 
             onNoteEdit:(title, body)=>{
