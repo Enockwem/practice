@@ -5,7 +5,7 @@ export default class App{
     constructor(root){
         this.notes = [];
         this.activeNote = null;
-        this.view = NotesView(root, this._handler());
+        this.view = new NotesView(root, this._handler());
     }
 
     _refreshNotes(){
@@ -26,7 +26,7 @@ export default class App{
         this.activeNote = note;
     }
 
-    
+
     _handler(){
         return{
             onNoteSelect: noteId =>{
