@@ -51,11 +51,18 @@ export default class App{
             },
 
             onNoteEdit:(title, body)=>{
-                console.log(title, body)
+                NotesAPI.saveNote({
+                    id: this.activeNote.id,
+                title:title,
+                    body:body
+                });
+
+                this._refreshNotes()
             },
 
             onNoteDelete: noteId => {
-                console.log("Note deleted", noteId)
+                NotesAPI.deleteNote(noteId)
+                this._refreshNotes()
             }
         }
     }
