@@ -1,3 +1,4 @@
+import NotesAPI from "./NotesAPI.js";
 import NotesView from "./NotesView.js";
 
 export default class App{
@@ -7,6 +8,23 @@ export default class App{
         this.view = NotesView(root, this._handler());
     }
 
+    _refreshNotes(){
+        const notes = NotesAPI.getAllNotes();
+
+        this._setNotes(notes);
+
+        if(notes.length > 0){
+            this._setActiveNote(notes[0])
+        }
+    }
+
+    _setNotes(){
+
+    }
+
+    _setActiveNotes(note){
+        
+    }
     _handler(){
         return{
             onNoteSelect: noteId =>{
