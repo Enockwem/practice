@@ -18,7 +18,6 @@ export default class NotesView{
         </div>
         `;
 
-
         // Working on the eventListeners 
         const btnAdd = this.root.querySelector(".button_add")
         const inpTitle = this.root.querySelector(".notes__title")
@@ -40,5 +39,27 @@ export default class NotesView{
                 this.onNoteEdit(inputT, inputB);
             });
         });
+    }
+
+    _createListItemHTML(id, title, body, updated){
+        const MAX_LENGHT_MESSAGE = 100;
+
+        return `
+        <div class="notes__list-item notes__list__item-selected">
+            <div class="notes__list__item-title">${title}</div>
+            <div class="notes__list__item-body">
+                ${body.substring(0, MAX_LENGHT_MESSAGE)}
+                <!--Check whether the length of the body is not greater than the MAX_LENGTH_MESSAGE value-->
+                ${body.length > MAX_LENGHT_MESSAGE ? "..." : ""}
+            </div>
+            <div class="notes__list__item-update">${updated.toLocaleString(undefined, {dateStyle: "full", timeStyle:"short"})}</div>
+        </div>
+        `
+    }
+
+
+    // Create an update notes function
+    updateNotesList(notes){
+        
     }
 }
