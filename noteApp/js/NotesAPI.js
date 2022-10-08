@@ -3,14 +3,16 @@ export default class NotesAPI{
     // This method will retrieve all the notes from the local storage.
     static getAllNotes(){
         const notes = JSON.parse(localStorage.getItem("notesApp-storage") || "[]")
-        return notes
+        return notes.sort((a,b)=>{
+            return new Date(a.updated) > new Date(b.updated) ? -1: 1;
+        })
     }
 
     // Saving the notes that are written 
     static saveNote(noteToSave){
         const notes = this.getAllNotes()
 
-        const existing = notes.find(note=>{note.id === noteToSave.id})
+        const existing = notes.find(note=> note.id == noteToSave.id)
 
         if(existing){
             // Just have to edit or update.
@@ -25,10 +27,11 @@ export default class NotesAPI{
             noteToSave.id = i
             noteToSave.updated = timeStamp
             notes.push(noteToSave)
+            // localStorage.setItem("notesApp-storage", JSON.stringify(notes))
         }
 
         // Now save to the localstorage.
-        localStorage.setItem("notesApp-storage", JSON.stringify(notes))
+        localStorage.setItem("notesApp-storage", JSON.stringify(notes));
 
     }
 
@@ -37,7 +40,7 @@ export default class NotesAPI{
         // 1 samuel 2: 1- 10
         // Isaiah 54:1
         const notes = this.getAllNotes()
-        const newNotes = notes.filter(note => note.id !== id)
+        const newNotes = notes.filter(note => note.id != id)
 
         localStorage.setItem('notesApp-storage',JSON.stringify(newNotes))
     }
