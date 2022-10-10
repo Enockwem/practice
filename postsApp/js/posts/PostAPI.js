@@ -5,7 +5,13 @@ export default class PostAPI{
         return post;
     }
 
-    static savePost(post){
-        
+    static savePost(title, body){
+        // This function will help me save new posts to the localstorage of the web.
+        localStorage.setItem("posts",JSON.stringify({
+            id:Math.floor(Math.random() * 100000),
+            title,
+            body,
+            updated: new Date().toISOString()
+        }))
     }
 }
