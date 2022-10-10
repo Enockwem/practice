@@ -3,6 +3,7 @@ export default class NotesAPI{
     // This method will retrieve all the notes from the local storage.
     static getAllNotes(){
         const notes = JSON.parse(localStorage.getItem("notesApp-storage") || "[]")
+        // console.log(notes)
         return notes.sort((a,b)=>{
             return new Date(a.updated) > new Date(b.updated) ? -1: 1;
         })
