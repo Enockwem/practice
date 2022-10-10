@@ -6,6 +6,8 @@ export default class App{
         this.notes = [];
         this.activeNote = null;
         this.view = new NotesView(root, this._handler());
+
+        this._refreshNotes();
     }
 
     _refreshNotes(){
@@ -21,7 +23,7 @@ export default class App{
     _setNotes(notes){
         this.notes = notes;
         this.view.updateNotesList(notes);
-        this.view.updateActiveNotes(notes.length > 0)
+        this.view.updateNotePreviewVisibility(notes.length > 0)
     }
 
     _setActiveNote(note){
@@ -34,35 +36,34 @@ export default class App{
         // call the api from this handler.
         return{
             onNoteSelect: noteId =>{
-                // console.log("Note selected is "+ noteId)
-                const selectedNote = this.notes.find(note => note.id === noteId);
-
+                const selectedNote = this.notes.find(note => note.id == noteId);
                 this._setActiveNote(selectedNote)
+                this._refreshNotes()
             },
 
             onNoteAdd: ()=>{
                 const newNote = {
                     title: "New note ...",
                     body: "Write here ..."
-                }
+                };
 
-                NotesAPI.saveNote(newNote)
-                this._refreshNotes()
+                NotesAPI.saveNote(newNote);
+                this._refreshNotes();
             },
 
             onNoteEdit:(title, body)=>{
                 NotesAPI.saveNote({
                     id: this.activeNote.id,
-                title:title,
-                    body:body
+                    title,
+                    body
                 });
 
-                this._refreshNotes()
+                this._refreshNotes();
             },
 
             onNoteDelete: noteId => {
                 NotesAPI.deleteNote(noteId)
-                this._refreshNotes()
+                this._refreshNotes();
             }
         }
     }
