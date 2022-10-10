@@ -45,10 +45,10 @@ export default class NotesView{
     }
 
     _createListItemHTML(id, title, body, updated){
-        const MAX_LENGHT_MESSAGE = 100;
+        const MAX_LENGHT_MESSAGE = 60;
 
         return `
-        <div class="notes__list-item" data-note-id=${id}>
+        <div class="notes__list-item" data-note-id="${id}">
             <div class="notes__list__item-title">${title}</div>
             <div class="notes__list__item-body">
                 ${body.substring(0, MAX_LENGHT_MESSAGE)}
@@ -65,14 +65,16 @@ export default class NotesView{
     updateNotesList(notes){
         const  itemContainer = this.root.querySelector(".notes__list");
 
-
         for (const note of notes) {
+            
             const html = this._createListItemHTML(note.id, note.title, note.body, new Date(note.updated))
 
             itemContainer.insertAdjacentHTML("beforeend", html)
         }
 
+
         // Giving the items list a click listener.
+        console.log(itemContainer.querySelectorAll(".notes__list-item"))
         itemContainer.querySelectorAll(".notes__list-item").forEach(noteItem =>{
             noteItem.addEventListener("click",()=>{
                 this.onNoteSelect(noteItem.dataset.noteId)
@@ -100,6 +102,8 @@ export default class NotesView{
 
         this.root.querySelector(`.notes__list-item[data-note-id="${note.id}"]`).classList.add("notes__list__item-selected")
     }
+
+
     updateNotePreviewVisibility(visible){
         this.root.querySelector(".notes__preview-container").style.visibility = visible ? "visible" : "hidden"
     }
