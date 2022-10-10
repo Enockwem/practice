@@ -21,6 +21,7 @@ body{
 
 .sidebar__section{
     margin: 10px;
+    cursor: pointer;
 }
 
 .preview__section{
