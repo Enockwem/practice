@@ -2,7 +2,9 @@ export default class PostAPI{
     static getAllPosts(){
         const post = JSON.parse(localStorage.getItem("posts") || "[]")
 
-        return post;
+        return post.sort((a,b)=>{
+            return new Date(a.updated) > new Date(b.updated) ? a: b;
+        });
     }
 
     static savePost(title, body){
