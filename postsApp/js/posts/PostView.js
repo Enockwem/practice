@@ -1,3 +1,4 @@
+import PostAPI from "./PostAPI.js";
 export default class PostView{
     constructor(root, {onPreviewChange}={}){
         this.root = root;
@@ -11,9 +12,9 @@ export default class PostView{
                 <div class="sidebar__section">Settings</div>
             </div>
             <div class="preview__section">
-                <div class="preview_titile">Title</div>
-                <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit nisi assumenda, ullam libero fuga perferendis perspiciatis quia nam recusandae debitis quae unde sint ab qui voluptatem illum voluptatibus? Fuga, ad.</div>
-                <div class="recent-posts">View recent posts</div>
+                <div class="preview_titile"></div>
+                <div class="description"></div>
+                <div class="recent-posts"></div>
             </div>
         </div>
         `
@@ -38,7 +39,34 @@ export default class PostView{
         </div>
         `
 
+        // this.root.querySelector(".btn").addEventListener("click",(event)=>{
+        //     window.alert(event.target.value)
+        // })
+
         preview.innerHTML = innerhtml;
         return preview;
+    }
+
+    _createPostSection(id, title, body, updated){
+        return `
+        <div class="post__section" data-post-id="${id}">
+            <h2 class="post-title">${title}</h2>
+            <p class="post-body">${body}</p>
+            <h4 class="time-posted">${updated}</h4>
+        </div>
+        `
+    }
+
+    showPosts(){
+        const posts = PostAPI.getAllPosts()
+        const container = this.root.querySelector(".preview__section")
+
+        for (const post of posts) {
+            const html = this._createPostSection(post.id, post.title, post.body, post.updated)
+
+            // container.append(html)
+            container.innerHTML = html
+        }
+        return container;
     }
 }
