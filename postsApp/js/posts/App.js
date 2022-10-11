@@ -15,7 +15,7 @@ export default class App{
                         this.view.showDashboard()
                         break;
                     case "Posts":
-                        window.alert("Posts")
+                        this.view.showPosts()
                         break;
                     case "Settings":
                         window.alert("Settings")
