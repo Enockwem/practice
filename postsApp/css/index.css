@@ -52,3 +52,20 @@ body{
 .recent-posts:active{
     color: rgb(93, 93, 234);
 }
+
+.btn{
+    font-size: 1.2em;
+    padding: 5px;
+    border:none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgba(0, 0, 0, 0.521);
+    color: white;
+}
+
+.btn:active{
+    background-color: white;
+    color: black;
+}
