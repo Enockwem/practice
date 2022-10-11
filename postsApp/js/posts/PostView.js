@@ -1,8 +1,7 @@
 export default class PostView{
-    constructor(root, {onPostSelecte, onColorChange}={}){
+    constructor(root, {onPreviewChange}={}){
         this.root = root;
-        this.onPostSelecte = onPostSelecte;
-        this.onColorChange = onColorChange;
+        this.onPreviewChange = onPreviewChange;
 
         this.root.innerHTML = `
         <div class="container">
@@ -18,5 +17,27 @@ export default class PostView{
             </div>
         </div>
         `
+
+        this.root.querySelectorAll(".sidebar__section").forEach(element => {
+            element.addEventListener("click",()=>{
+                // window.alert("Clicked ", element.textContent)
+                const section = element.textContent;
+                this.onPreviewChange(section)
+            })
+        });
+    }
+
+    showDashboard(){
+        const preview = this.root.querySelector(".preview__section")
+        const innerhtml = `
+        <div class="preview__dashboard">
+            <h1 class="welcome__note">Welcome to Enock's Dashboard</h1>
+            <div class="description">I am a software developer looking to help people live better through technology.</div>
+            <div class="recent-posts">View recent posts</div>
+        </div>
+        `
+
+        preview.innerHTML = innerhtml;
+        return preview;
     }
 }
