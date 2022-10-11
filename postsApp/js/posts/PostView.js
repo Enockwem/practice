@@ -33,7 +33,8 @@ export default class PostView{
         <div class="preview__dashboard">
             <h1 class="welcome__note">Welcome to Enock's Dashboard</h1>
             <div class="description">I am a software developer looking to help people live better through technology.</div>
-            <div class="recent-posts">View recent posts</div>
+            <!--<div class="recent-posts">View recent posts</div>-->
+            <button class="btn">Make a Post</button>
         </div>
         `
 
