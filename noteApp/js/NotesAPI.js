@@ -9,7 +9,7 @@ export default class NotesAPI{
         })
     }
 
-    // Saving the notes that are written 
+    // Saving the notes that are written
     static saveNote(noteToSave){
         const notes = this.getAllNotes()
 
