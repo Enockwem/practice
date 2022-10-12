@@ -28,6 +28,16 @@ export default class PostView{
         });
     }
 
+    _makeAPost(){
+        const preview = this.root.querySelector(".preview__section")
+        const innerhtml = `
+        <div class="make__post-section">
+            <input type="text" class="post-title" placeholder="Write your title...">
+            <textarea name="" id="" cols="30" rows="10" class="post-body">Write your post...</textarea>
+        </div>
+        `
+        preview.innerHTML = innerhtml;
+    }
     showDashboard(){
         const preview = this.root.querySelector(".preview__section")
         const innerhtml = `
@@ -39,12 +49,24 @@ export default class PostView{
         </div>
         `
 
-        // this.root.querySelector(".btn").addEventListener("click",(event)=>{
-        //     window.alert(event.target.value)
-        // })
-
         preview.innerHTML = innerhtml;
-        return preview;
+
+        const btn = this.root.querySelector(".btn")
+
+        btn.addEventListener("click",()=>{
+            // console.log("It works")
+            this._makeAPost()
+        })
+        // if(btn === undefined){
+        // return preview;
+        // }else{
+        //     btn.addEventListener('click',()=>{
+        //         console.log("The click listener works very well.")
+        //     });
+
+        //     return preview;
+        // }
+        // return preview;
     }
 
     _createPostSection(id, title, body, updated){
