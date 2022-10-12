@@ -69,3 +69,23 @@ body{
     background-color: white;
     color: black;
 }
+
+.make__post-section{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.post-title{
+    padding: 10px;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+}
+
+.post-body{
+    padding: 10px;
+    font-family: sans-serif;
+    outline: none;
+}
