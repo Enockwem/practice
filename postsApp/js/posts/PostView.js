@@ -38,6 +38,18 @@ export default class PostView{
         </div>
         `
         preview.innerHTML = innerhtml;
+
+        // now time to add the click listener to the button 
+        this.root.querySelector(".btn").addEventListener("click",()=>{
+            const title = this.root.querySelector(".post-title").value;
+            const body = this.root.querySelector(".post-body").value;
+            if(title === "" || body === ""){
+                window.alert("Can't save empty things.")
+            }else{
+
+                PostAPI.savePost(title, body)
+            }
+        });
     }
     showDashboard(){
         const preview = this.root.querySelector(".preview__section")
