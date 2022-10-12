@@ -89,3 +89,8 @@ body{
     font-family: sans-serif;
     outline: none;
 }
+
+.time-posted{
+    text-align: right;
+    color: grey;
+}
