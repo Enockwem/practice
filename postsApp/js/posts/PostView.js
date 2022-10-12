@@ -61,11 +61,12 @@ export default class PostView{
         const posts = PostAPI.getAllPosts()
         const container = this.root.querySelector(".preview__section")
 
+        container.innerHTML = ""
         for (const post of posts) {
             const html = this._createPostSection(post.id, post.title, post.body, post.updated)
 
             // container.append(html)
-            container.innerHTML = html
+            container.insertAdjacentHTML("beforeend", html)
         }
         return container;
     }
