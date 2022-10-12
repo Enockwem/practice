@@ -34,6 +34,7 @@ export default class PostView{
         <div class="make__post-section">
             <input type="text" class="post-title" placeholder="Write your title...">
             <textarea name="" id="" cols="30" rows="10" class="post-body">Write your post...</textarea>
+            <button class="btn" style="margin-top:20px">Save Post</button>
         </div>
         `
         preview.innerHTML = innerhtml;
