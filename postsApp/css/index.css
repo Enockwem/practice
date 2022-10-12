@@ -94,3 +94,11 @@ body{
     text-align: right;
     color: grey;
 }
+
+.post__section{
+    border-bottom: 1px solid grey;
+    background-color: azure;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
