@@ -103,7 +103,9 @@ export default class PostView{
             <div class="pre">
                 <div class="post-preview-title">${title}</div>
                 <div class="post-preview-body">${body}</div>
-                <button class="btn">back<button>
+                <div class="back-btn">
+                    <button class="btn">Back</button>
+                </div>
             </div>
        </div>
         `

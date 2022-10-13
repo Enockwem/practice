@@ -59,6 +59,8 @@ body{
     padding: 5px;
     border:none;
     cursor: pointer;
+    border-radius:5px;
+    align-self: flex-end;
 }
 
 .btn:hover{
@@ -104,11 +106,18 @@ body{
     margin-bottom: 10px;
 }
 
-.post__preview-section{
+.preview_dashboard{
     background-color: aqua;
     color: black;
     font-size: 1.2em;
     font-family: sans-serif;
     font-weight: bold;
     padding: 10px;
+}
+
+
+.back-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
 }
