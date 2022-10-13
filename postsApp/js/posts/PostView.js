@@ -145,6 +145,6 @@ export default class PostView{
             });
 
         });
-        return container;
+        // return container;
     }
 }
