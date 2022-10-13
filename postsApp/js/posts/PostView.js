@@ -92,6 +92,22 @@ export default class PostView{
         `
     }
 
+    _createPostPreviewSection(title, body){
+        return `
+        <div class="post__preview-section">
+            <nav class="preview_dashboard">
+                <a href="" class="navbar-link">Home</a>
+                <a href="" class="navbar-link">About</a>
+                <a href="" class="navbar-link">Services</a>
+            </nav>
+            <div class="pre">
+                <div class="post-preview-title">${title}</div>
+                <div class="post-preview-body">${body}</div>
+                <button class="btn">back<button>
+            </div>
+       </div>
+        `
+    }
     showPosts(){
         const posts = PostAPI.getAllPosts()
         const container = this.root.querySelector(".preview__section")
@@ -101,8 +117,25 @@ export default class PostView{
             const html = this._createPostSection(post.id, post.title, post.body, post.updated)
 
             // container.append(html)
+            
             container.insertAdjacentHTML("beforeend", html)
         }
+        console.log(container)
+        const postDisplay = this.root.querySelectorAll(".post__section")
+        postDisplay.forEach(element=>{
+            element.addEventListener('click',()=>{
+                const post_id = element.dataset.postId;
+                // console.log("Post id", post_id)
+                let pos;
+                for (const post of posts) {
+                    if(post.id == post_id){
+                        pos = post
+                    }
+                }
+                
+                this._createPostPreviewSection(pos.title,pos.body)
+            });
+        });
         return container;
     }
 }
