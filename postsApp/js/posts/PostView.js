@@ -104,7 +104,7 @@ export default class PostView{
                 <div class="post-preview-title">${title}</div>
                 <div class="post-preview-body">${body}</div>
                 <div class="back-btn">
-                    <button class="btn">Back</button>
+                    <button class="btn click-btn">Back</button>
                 </div>
             </div>
        </div>
@@ -137,7 +137,13 @@ export default class PostView{
                 
                 const pre = this._createPostPreviewSection(pos.title,pos.body)
                 container.innerHTML = pre
+                const btn = this.root.querySelector(".click-btn")
+                // Now give the back button an EventListener.
+                btn.addEventListener("click",()=>{
+                    this.showPosts()
+                })
             });
+
         });
         return container;
     }
