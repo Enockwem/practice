@@ -18,5 +18,7 @@ export default class PostAPI{
             body,
             updated: new Date().toISOString()})
         localStorage.setItem("posts",JSON.stringify(posts))
+
+        return true;
     }
 }
