@@ -113,6 +113,10 @@ body{
     font-family: sans-serif;
     font-weight: bold;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
 }
 
 
