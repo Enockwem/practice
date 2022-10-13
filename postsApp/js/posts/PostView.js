@@ -47,9 +47,13 @@ export default class PostView{
                 window.alert("Can't save empty things.")
             }else{
 
-                PostAPI.savePost(title, body)
+                const bool = PostAPI.savePost(title, body)
+                if(bool){
+                    this.showPosts()
+                }
             }
         });
+        
     }
     showDashboard(){
         const preview = this.root.querySelector(".preview__section")
@@ -68,7 +72,7 @@ export default class PostView{
 
         btn.addEventListener("click",()=>{
             // console.log("It works")
-            this._makeAPost()
+            this._makeAPost();
         })
         // if(btn === undefined){
         // return preview;
