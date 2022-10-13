@@ -120,7 +120,7 @@ export default class PostView{
             
             container.insertAdjacentHTML("beforeend", html)
         }
-        console.log(container)
+        
         const postDisplay = this.root.querySelectorAll(".post__section")
         postDisplay.forEach(element=>{
             element.addEventListener('click',()=>{
@@ -133,7 +133,8 @@ export default class PostView{
                     }
                 }
                 
-                this._createPostPreviewSection(pos.title,pos.body)
+                const pre = this._createPostPreviewSection(pos.title,pos.body)
+                container.innerHTML = pre
             });
         });
         return container;
