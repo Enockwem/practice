@@ -1,0 +1,45 @@
+body{
+    height: 100vh;
+}
+
+.container{
+    margin: 2em;
+    display: flex;
+}
+
+.previous-quotes{
+    width: 20%;
+    padding: 1em;
+}
+
+.quote-content{
+    margin: 10px;
+    padding: 10px;
+}
+
+.preview-quote-section{
+    width: 40%;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+.author-section{
+    width: 40%;
+    background-color: rgba(128, 128, 128, 0.226);
+    align-self: flex-end;
+    border-radius: 5px;
+}
+
+.previous-quote{
+    font-size: smaller;
+}
+
+.generate-btn{
+    height: 1.7em;
+    font-size: 1.3em;
+    border: none;
+    margin: 10px;
+    background-color:grey;
+    color: wheat;
+    cursor: pointer;
+}
