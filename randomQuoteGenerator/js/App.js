@@ -1,4 +1,4 @@
-import QuotesAPI from "./QuotesAPI.js";
+import QuoteController from "./QuoteController";
 
 export default class App{
     constructor(root){
@@ -30,7 +30,7 @@ export default class App{
 
     document.getElementById("btn").addEventListener("click",()=>{
         // window.alert("I have clicked the button.");
-        this.root.querySelector(".quote-content-preview").innerHTML = QuotesAPI.getQuotes()
+        this.root.querySelector(".quote-content-preview").innerHTML = new QuoteController().generateQuote()
     })
     }
 }
