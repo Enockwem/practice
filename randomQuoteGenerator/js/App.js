@@ -1,7 +1,7 @@
 export default class App{
     constructor(root){
         this.root =  root;
-
+        
         this.root.innerHTML = `<div class="container">
         <div class="previous-quotes">
             <div class="quote-content previous-quote">Lorem ipsum dolor sit amet, 
