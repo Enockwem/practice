@@ -1,7 +1,9 @@
+import QuotesAPI from "./QuotesAPI.js";
+
 export default class App{
     constructor(root){
         this.root =  root;
-        
+
         this.root.innerHTML = `<div class="container">
         <div class="previous-quotes">
             <div class="quote-content previous-quote">Lorem ipsum dolor sit amet, 
@@ -14,7 +16,7 @@ export default class App{
             <div class="author-section previous-quote">wasswaenockmale</div>
         </div>
         <div class="preview-quote-section">
-            <div class="quote-content">
+            <div class="quote-content quote-content-preview">
                 A web application can help create a 
                 budget for those who want to have a function.
                 One can tell, the money they have, the people 
@@ -22,8 +24,13 @@ export default class App{
                 a budget for them. And then make the party colorful.
             </div>
             <div class="author-section">@author wasswaenockmale</div>
-            <button class="generate-btn">Generate</button>
+            <button class="generate-btn" id="btn">Generate</button>
         </div>
     </div>`
+
+    document.getElementById("btn").addEventListener("click",()=>{
+        // window.alert("I have clicked the button.");
+        this.root.querySelector(".quote-content-preview").innerHTML = QuotesAPI.getQuotes()
+    })
     }
 }
