@@ -23,7 +23,6 @@ async function findInStorage(nest, name){
 //         throw new Error("Woosh");
 //     }, 20);
 // }catch(_){
-//     // This will not run
 //     console.log("Caught!");
 // }
 
