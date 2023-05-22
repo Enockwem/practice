@@ -1,65 +1,67 @@
 function solution(number){
     // convert the number to a roman numeral
+    const help = {
+      'I': 1,
+      'V': 5,
+      'X': 10,
+      'L': 50,
+      'C': 100,
+      'D': 500,
+      'M': 1000,
+    }
     function romanValue(value){
-      if(value >= 1 && value <= 5){
-        if(value == 1){
-          return 'I'
-        }else if(value == 4){
-          return 'IV'
-        }else if(value === 5){
-            return 'V'
+        if(Object.keys(help).find(el => help[el] === value)){
+            return Object.keys(help).find(el => help[el] === value);
         }else{
-          return 'I'.repeat(value);
+            // If the value does not exist in the object.
+            const str = Number(value).toString().length
+            console.log(str)
+            if(str == 1){
+                if(value < 5){
+                    if(value === 4){
+                        return 'IV';
+                    }else{
+                        return 'I'.repeat(value);
+                    }
+                }else{
+                    if(value === 9){
+                        return 'IX';
+                    }else{
+                        return 'V' + 'I'.repeat(value - 5);
+                    }
+                }      
+            }else if(str == 2){
+                if(value < 50){
+                    if(value === 40){
+                        return 'XL';
+                    }else{
+                        return 'X'.repeat(value/10);
+                    }
+                }else{
+                    if(value === 90){
+                        return 'XC';
+                    }else{
+                        return 'L' + 'X'.repeat((value - 50)/10);
+                    }
+                }   
+            }else if(str == 3){
+                if(value < 500){
+                    if(value === 400){
+                        return 'CD';
+                    }else{
+                        return 'C'.repeat(value/100);
+                    }
+                }else{
+                    if(value === 900){
+                        return 'CM';
+                    }else{
+                        return 'D' + 'C'.repeat((value - 500)/100);
+                    }
+                }   
+            }else if(str == 4){
+                return 'M'.repeat(value/1000)
+            }
         }
-      }else if(value > 5 && value <= 10){
-        if(value === 9){
-          return 'IX';
-        }else if(value === 10){
-            return 'X'
-        }else{
-          const diff = value - 5
-          return 'V' + 'I'.repeat(diff);
-        }
-      }else if(value > 10 && value <= 50){
-        if(value == 40){
-          return 'XL'
-        }else if(value === 50){
-            return 'L'
-        }else{
-          const diff = (value - 10)/10 + 1;
-          return 'X'.repeat(diff)
-        }
-      }else if(value > 50 && value <= 100){
-        if(value == 90){
-          return 'XC'
-        }else if(value === 100){
-            return 'C'
-        }else{
-          const diff = (value - 50)/10 + 1;
-          return 'L' + 'X'.repeat(diff)
-        }
-      }else if(value > 100 && value <= 500){
-        if(value === 400){
-          return 'CD';
-        }else if(value === 500){
-            return 'D'
-        }else{
-          const diff = (value - 100)/100 + 1
-          return 'C'.repeat(diff)
-        }
-      }else if(value > 500 && value <= 1000){
-        if(value === 900){
-          return 'CM'
-        }else if(value === 1000){
-            return 'M'
-        }else{
-          const diff = (value - 500)/100 + 1
-          return 'D' + 'C'.repeat(diff);
-        }
-      }else if (value > 1000){
-        const diff = value - 1000;
-        return 'M'.repeat((diff/1000)+1);
-      }
     }
     let reminder;
     let count = 0;
@@ -67,19 +69,14 @@ function solution(number){
     let res = '';
     while(number != 0){
         reminder = number % 10;
-        if(reminder === 0){
-            count++;
-            number = Math.floor(number/10);
-        }else{
-            newValue = reminder * Math.pow(10,count);
-            console.log(newValue);
-            res = romanValue(newValue) + res;
-            count++;
-            number = Math.floor(number/10);
-            console.log(number)
-        }
+        // number /= 10;
+        newValue = reminder * Math.pow(10,count);
+        res = romanValue(newValue) + res;
+        count++;
+        number = Math.floor(number/10)
     }
 
-    return res;
+    return res
 }
-console.log(solution(3698));
+
+console.log(solution(3698))
