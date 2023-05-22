@@ -9,10 +9,10 @@ function rgb(r, g, b){
             return value;
         }
     }
+
     let hexR = round(r) <= 15 ? '0' + round(r).toString(16): round(r).toString(16);
     let hexG = round(g) <= 15 ? '0' + round(g).toString(16): round(g).toString(16);
     let hexB = round(b) <= 15 ? '0' + round(b).toString(16): round(b).toString(16);
-    
     
     let res = hexR + hexG + hexB;
     return res.toUpperCase();
