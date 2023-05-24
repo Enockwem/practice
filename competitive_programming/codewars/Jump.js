@@ -5,8 +5,6 @@
 // there is a path that allows you to jump from 
 // one cell to another, eventually jumping past 
 // the end of the array, otherwise you lose.
-
-
 function canJump(array){
   let curr = array[0]
     if(array.length === 1){
