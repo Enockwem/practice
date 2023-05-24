@@ -15,7 +15,7 @@ function solution(number){
         }else{
             // If the value does not exist in the object.
             const str = Number(value).toString().length
-            console.log(str)
+            // console.log(str)
             if(str == 1){
                 if(value < 5){
                     if(value === 4){
