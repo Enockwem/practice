@@ -15,7 +15,11 @@ function canJump(array){
         let index_1 = 1;
         while(index_1 < curr){
             if(array[index_1] > 0){
-                break;
+              // check every posible solution.
+              // check whether this direction will lead to a dead end.
+              // If there is no other solution them go with the last solution.
+              
+              break;
             }else{
                 index_1++;
             }
