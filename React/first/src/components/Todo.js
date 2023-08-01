@@ -15,7 +15,6 @@ function AddForm({addValue}){
 
 function ListItems({ints}){
   const list = (items) => {
-    console.log(items)
     return items.map((item, index )=> <li key={index}>{item}</li>)
   }
   return (
