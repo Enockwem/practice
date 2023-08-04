@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "address":"12 Valley of kings, Geneva",
+        "country": "Switzerland",
+        "description":"A superb detached Victorian property on one of ",
+        "price":100000,
+        "photo":"277667"
+    },
+    {
+        "id":2,
+        "address":"12 Valley of kings, Geneva",
+        "country": "Switzerland",
+        "description":"A superb detached Victorian property on one of ",
+        "price":100000,
+        "photo":"277667"
+    },
+    {
+        "id":3,
+        "address":"12 Valley of kings, Geneva",
+        "country": "Switzerland",
+        "description":"A superb detached Victorian property on one of ",
+        "price":100000,
+        "photo":"277667"
+    },
+    {
+        "id":4,
+        "address":"12 Valley of kings, Geneva",
+        "country": "Switzerland",
+        "description":"A superb detached Victorian property on one of ",
+        "price":100000,
+        "photo":"277667"
+    },
+    {
+        "id":5,
+        "address":"12 Valley of kings, Geneva",
+        "country": "Switzerland",
+        "description":"A superb detached Victorian property on one of ",
+        "price":100000,
+        "photo":"277667"
+    }
+]
