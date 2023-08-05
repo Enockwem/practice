@@ -1,0 +1,17 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-image{
+    width:49%;
+    /* border: 1px solid green; */
+}
+
+.content-details{
+    width: 49%;
+}
+.image{
+    width: 100%;
+}

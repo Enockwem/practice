@@ -1,0 +1,41 @@
+.container{
+    width: 60%;
+    height: 100vh;
+    margin-left: 20%;
+}
+
+.row {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.subtitle{
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.logo{
+    width: 200px;
+}
+
+.house-filter{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.house-select{
+    width: 30%;
+}
+
+.house-option{
+    width: 100%;
+    margin-left: 20px;
+}

@@ -1,11 +1,12 @@
-const Header = () => (
-    <div className="">
+import logo from './GloboLogo.png';
+import '../main-page/index.css'
+const Header = ({subtitle}) => (
+    <div className="row">
         <div>
-            <img src="" alt="logo" className="logo" />
-            {/* <h2 className="text-3xl font-bold underline">GLOBOMANTICS</h2> */}
+            <img src={logo} alt="logo" className="logo" />
         </div>
         <div>
-            <h4 className="">Providing houses all over the world</h4>
+            <h4 className="subtitle">{subtitle}</h4>
         </div>
     </div>
 )

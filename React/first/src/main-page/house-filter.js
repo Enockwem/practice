@@ -1,16 +1,18 @@
+import './index.css'
 
 const HouseFilter = ({allHouses}) => {
+
     const countries = allHouses ? Array.from(new Set(allHouses.map( h => h.country))) : [];
 
     countries.unshift(null);
 
     return (
-        <div>
-            <div>
+        <div className='house-filter'>
+            <div className=''>
                 Look for your dream house in country:
             </div>
-            <div>
-                <select>
+            <div className='house-select'>
+                <select className='house-option'>
                     {
                         countries.map(c => (
                             <option key={c} value={c}>
